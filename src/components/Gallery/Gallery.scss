@@ -1,0 +1,12 @@
+.gallery__carousel{
+    display: flex;
+    overflow: hidden;
+    & &__title{
+        display: flex;
+        width: auto;
+        height: 250px;
+    }
+    & &-items{
+        display: flex;
+    }
+}
