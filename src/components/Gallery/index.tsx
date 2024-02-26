@@ -1,8 +1,11 @@
 import { Card, CardActionArea } from '@mui/material';
-import './Gallery.scss';
 import GalleryItem from './GalleryItem';
+import './Gallery.scss';
+
+
 
 const Gallery = () => {
+
     return (
         <div className="gallery__section">
             <div className="gallery__title h2">Товары</div>

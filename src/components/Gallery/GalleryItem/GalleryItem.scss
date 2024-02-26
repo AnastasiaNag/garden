@@ -2,7 +2,9 @@
 
  & &-item{
     display: flex;
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    flex-shrink: 0;
+    height: 100%;
  }
 }
+
