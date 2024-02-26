@@ -1,20 +1,20 @@
 import './GalleryItem.scss';
-import { posts } from './utils';
 import Card from '@mui/material/Card';
 import { CardActionArea, colors } from '@mui/material';
-
+import { IGood } from '../../../redux/Good/types';
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
+import { IWork } from '../../../redux/Work/types';
 
-const GalleryItem = () => {
+const GalleryItem = ({ items }: any) => {
     const swiperRef = useRef<SwiperCore>();
     return (
         <>
-        <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
+            <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
             <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={50}
@@ -23,7 +23,7 @@ const GalleryItem = () => {
                     swiperRef.current = swiper;
                 }}
             >
-                {posts.map((item, index) => {
+                {items.map((item: IGood | IWork, index: number) => {
                     if (index <= 4) {
                         return (
                             <SwiperSlide>

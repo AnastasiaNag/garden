@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import good from './Good';
+import work from './Work';
 
 export const store = configureStore({
     reducer: {
-        
+        good,
+        work,
     },
 });
 
