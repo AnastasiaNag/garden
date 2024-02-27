@@ -1,6 +1,6 @@
 import Header from '../../components/Header';
 import Gallery from '../../components/Gallery';
-
+import Employee from '../../components/Employee';
 import Footer from '../../components/Footer';
 import './Home.scss';
 
@@ -12,6 +12,9 @@ const Home = () => {
             </div>
             <div>
                 <Gallery />
+            </div>
+            <div>
+                <Employee />
             </div>
             <div>
                 <Footer />
