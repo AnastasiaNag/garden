@@ -26,10 +26,6 @@ const routes = createBrowserRouter([
     path: "/works",
     element: <Works />,
   },
-  {
-    path: "/works/item",
-    element: <WorkItem />,
-  }
 ]);
 
   root.render(

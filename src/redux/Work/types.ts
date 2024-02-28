@@ -8,4 +8,5 @@ export interface CounterState {
     value: number;
     works: IWork[];
     id: IWork[];
+    work: IWork;
 }

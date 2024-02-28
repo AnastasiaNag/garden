@@ -1,42 +1,25 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getWorks } from "../../redux/Work";
-import { RootState, AppDispatch } from "../../redux/store";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { IWork } from "../../redux/Work/types";
+import Header from '../../components/Header';
+import WorkCurrentItem from '../../components/WorkCurrentItem';
+import Footer from '../../components/Footer';
+import './Works.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-const WorkItem = () => {
-    const { works } = useSelector((state: RootState) => state.work);
-
-    useEffect(() => {
-        getWork();
-    }, []);
-
-    const dispatch = useDispatch<AppDispatch>();
-
-    const getWork = async () => {
-        dispatch(getWorks());
-    };
-    return ( 
+const Works = () => {
+    return (
         <div>
             <div>
                 <Header />
             </div>
-            <div>
-                {works.map((item: IWork) => {
-                    return (
-                        <><div>{item.text}</div>
-                        <div>{item.text}</div></>
-                    )
-                    })}
-            </div>
-
+            <Router>
+                <Routes>
+                    <Route path="/works/:id" element={<WorkCurrentItem />} />
+                </Routes>
+            </Router>
             <div>
                 <Footer />
             </div>
-        </div> );
-     ;
-}
- 
-export default WorkItem;
+        </div>
+    );
+};
+
+export default Works;
