@@ -9,7 +9,7 @@ const GallerySection = ({title, items, type, handleClick, handleItemClick}: any)
             <div className="gallery__carousel">
                 <Card onClick={handleClick} className="gallery__carousel__title start">
                     <CardActionArea>
-                        <div className="item__text">Наши {title}</div>
+                        <div className="gallery__carousel__item__text h3">Наши {title}</div>
                     </CardActionArea>
                 </Card>
                 <div className="gallery__carousel-items">

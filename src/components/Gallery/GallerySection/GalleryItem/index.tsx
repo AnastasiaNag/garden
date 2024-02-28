@@ -16,7 +16,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
 
     return (
         <>
-            <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
+            <button className='gallery__btn__prev gallery__btn' onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
             <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={50}
@@ -52,7 +52,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
                     }
                 })}
             </Swiper>
-            <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
+            <button className='gallery__btn__next gallery__btn' onClick={() => swiperRef.current?.slideNext()}>Next</button>
         </>
     );
 };
