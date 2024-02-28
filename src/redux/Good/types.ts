@@ -1,6 +1,7 @@
 export interface IGood {
     title: string,
     text: string | number,
+    id: string | number
 }
 
 export interface CounterState {

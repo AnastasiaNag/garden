@@ -1,4 +1,5 @@
 export interface IWork {
+    id: string | number;
     title: string,
     text: string | number,
 }
