@@ -4,7 +4,7 @@ import './GallerySection.scss'
 
 const GallerySection = ({title, items, type, handleClick, handleItemClick}: any) => {
     return (
-        <div className={`gallery__section__${type} gallery__section`}>
+        <div className={`gallery__section__${type} gallery__section section`}>
             <div className="gallery__title h2">{title}</div>
             <div className="gallery__carousel">
                 <Card onClick={handleClick} className="gallery__carousel__title start">

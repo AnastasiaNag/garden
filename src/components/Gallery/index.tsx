@@ -17,7 +17,7 @@ const Gallery = () => {
         getWork();
     }, []);
     const dispatch = useDispatch<AppDispatch>();
-    
+
     const getGood = async () => {
         dispatch(getGoods());
     };
@@ -25,15 +25,15 @@ const Gallery = () => {
         dispatch(getWorks());
     };
     const handleClick = (page: string) => {
-        window.open(`/${page}`)
-    }
+        window.open(page, '_self');
+    };
     const handleItemClick = (id: string) => {
         window.open(`/works/${id}`);
     };
     return (
         <>
-            <GallerySection type={'goods'} title={'товары'} items={goods} handleClick={() => handleClick('goods')}/>
-            <GallerySection type={'works'} title={'услуги'} items={works} handleClick={() => handleClick('works')} handleItemClick={() => handleItemClick}/>
+            <GallerySection type={'works'} title={'услуги'} items={works} handleClick={() => handleClick('works')} handleItemClick={() => handleItemClick} />
+            <GallerySection type={'goods'} title={'товары'} items={goods} handleClick={() => handleClick('goods')} />
         </>
     );
 };

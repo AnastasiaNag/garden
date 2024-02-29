@@ -19,7 +19,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
             <button className='gallery__btn__prev gallery__btn' onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
             <Swiper
                 modules={[Navigation, A11y]}
-                spaceBetween={50}
+                spaceBetween={25}
                 slidesPerView={3}
                 onBeforeInit={(swiper: any) => {
                     swiperRef.current = swiper;
