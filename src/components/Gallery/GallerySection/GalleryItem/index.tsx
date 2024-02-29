@@ -29,7 +29,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
                     if (index <= 4) {
                         return (
                             <SwiperSlide>
-                                <Card onClick={handleItemClick} className="gallery__carousel-item">
+                                <Card onClick={() => handleItemClick(item.id)} className="gallery__carousel-item">
                                     <CardActionArea>
                                         <div className="item__title h4">{item.title}</div>
                                         <div className="item__text h6">{item.text}</div>
