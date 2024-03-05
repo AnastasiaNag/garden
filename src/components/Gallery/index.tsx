@@ -10,23 +10,23 @@ import GallerySection from './GallerySection';
 const Gallery = () => {
     const { goods } = useSelector((state: RootState) => state.good);
     const { works } = useSelector((state: RootState) => state.work);
-    const { work } = useSelector((state: RootState) => state.work);
+    // const { work } = useSelector((state: RootState) => state.work);
+    const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
+        const getGood = async () => {
+            dispatch(getGoods());
+        };
+        const getMultWork = async () => {
+            dispatch(getWorks());
+        };
+        const getOneWork = async () => {
+            dispatch(getWork());
+        };
         getGood();
         getMultWork();
         getOneWork();
-    }, []);
-    const dispatch = useDispatch<AppDispatch>();
+    }, [dispatch]);
 
-    const getGood = async () => {
-        dispatch(getGoods());
-    };
-    const getMultWork = async () => {
-        dispatch(getWorks());
-    };
-    const getOneWork = async () => {
-        dispatch(getWork());
-    };
     const handleClick = (page: string) => {
         window.open(page, '_self');
     };

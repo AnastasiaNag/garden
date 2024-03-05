@@ -1,0 +1,35 @@
+.header__up{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 20px;
+    background-color: #292929;
+    color: white;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    &__up{
+        background-color: #292929;
+        cursor: pointer;
+        color: white;
+    }
+}
+.header__down{
+    padding: 3px 20px;
+    color: white;
+    display: flex;
+    background-color: #434343;
+    justify-content: space-around;
+    &-img{
+        height: 50px;
+    }
+}
+
+.header__nav{
+    display: flex;
+    gap: 20px;
+    &-btn{
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+}

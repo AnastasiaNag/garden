@@ -1,6 +1,6 @@
 import './GalleryItem.scss';
 import Card from '@mui/material/Card';
-import { CardActionArea, colors } from '@mui/material';
+import { CardActionArea } from '@mui/material';
 import { IGood } from '../../../../redux/Good/types';
 import { Navigation, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,7 +16,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
 
     return (
         <>
-            <button className='gallery__btn__prev gallery__btn' onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
+            <button className="gallery__btn__prev gallery__btn" onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
             <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={25}
@@ -47,12 +47,11 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
                                 </Card>
                             </SwiperSlide>
                         );
-                    } else if (index > 5) {
-                        return;
-                    }
+                    } return null;
+                    
                 })}
             </Swiper>
-            <button className='gallery__btn__next gallery__btn' onClick={() => swiperRef.current?.slideNext()}>Next</button>
+            <button className="gallery__btn__next gallery__btn" onClick={() => swiperRef.current?.slideNext()}>Next</button>
         </>
     );
 };

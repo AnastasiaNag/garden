@@ -9,15 +9,15 @@ const WorksList = () => {
     const { works } = useSelector((state: RootState) => state.work);
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
+        const getWork = async () => {
+            dispatch(getWorks());
+        };
         getWork();
-    }, []);
-    const getWork = async () => {
-        dispatch(getWorks());
-    };
+    }, [dispatch]);
 
     return (
         <div className="works-list__section section">
-            <div className='works-list__section__breadcrumb'>
+            <div className="works-list__section__breadcrumb">
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                         Домашняя страница
@@ -26,10 +26,10 @@ const WorksList = () => {
                 </Breadcrumbs>
             </div>
             <div className="works-list__section__title h2">Услуги</div>
-            <div className='works-list__section__cards'>
+            <div className="works-list__section__cards">
                 {works.map(item => {
                     return (
-                        <Card className='works-list__section__card'>
+                        <Card className="works-list__section__card">
                             <CardActionArea >
                                 <div>{item.title}</div>
                                 <div>{item.text}</div>

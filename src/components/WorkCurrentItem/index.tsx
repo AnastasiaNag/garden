@@ -1,8 +1,8 @@
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { IWork } from '../../redux/Work/types';
+import { useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+// import axios from 'axios';
+// import { IWork } from '../../redux/Work/types';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
 import { getWork } from '../../redux/Work';
@@ -11,14 +11,14 @@ import { getWork } from '../../redux/Work';
 
 const WorkCurrentItem = () => {
     const { work } = useSelector((state: RootState) => state.work);
-    useEffect(() => {
-        getWorkItem();
-    }, []);
     const dispatch = useDispatch<AppDispatch>();
+    useEffect(() => {
+        const getWorkItem = async () => {
+            dispatch(getWork());
+        };
+        getWorkItem();
+    }, [dispatch]);
     
-    const getWorkItem = async () => {
-        dispatch(getWork());
-    };
 
 
     return (
