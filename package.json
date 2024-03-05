@@ -32,11 +32,11 @@
     "build": "react-scripts build",
     "server": "json-server --watch db.json --port 3001",
     "precommit": "lint-staged",
-    "eslint": "node_modules\\.bin\\eslint src\\"
+    "eslint": "node_modules\\.bin\\eslint src\\",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js, jsx, ts, tsx}": [
-      "node_modules\\.bin\\eslint --max-warnings=0",
       "prettier --write",
       "git add"
     ]
