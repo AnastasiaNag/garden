@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import good from './Good';
 import work from './Work';
+import admin from './Admin';
 
 export const store = configureStore({
     reducer: {
         good,
         work,
+        admin,
     },
 });
 

@@ -1,7 +1,7 @@
 import Header from '../../components/Header';
 import WorkCurrentItem from '../../components/WorkCurrentItem';
 import Footer from '../../components/Footer';
-import './Works.scss';
+import './WorkItem.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const Works = () => {

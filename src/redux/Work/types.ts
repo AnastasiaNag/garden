@@ -10,3 +10,7 @@ export interface CounterState {
     id: IWork[];
     work: IWork;
 }
+export interface PCreateWork {
+    title: string;
+    text: string | number;
+}
