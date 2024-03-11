@@ -19,12 +19,12 @@ const Gallery = () => {
         const getMultWork = async () => {
             dispatch(getWorks());
         };
-        const getOneWork = async () => {
-            dispatch(getWork());
-        };
+        // const getOneWork = async () => {
+        //     dispatch(getWork());
+        // };
         getGood();
         getMultWork();
-        getOneWork();
+        // getOneWork();
     }, [dispatch]);
 
     const handleClick = (page: string) => {

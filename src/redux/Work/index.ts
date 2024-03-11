@@ -34,7 +34,7 @@ export const counterSlice = createSlice({
         builder.addCase(add.fulfilled, (state, action) => {
             state.works.push(action.payload);
         });
-        builder.addCase(saveChangesAsync.fulfilled, (state, action) => {
+        builder.addCase(editWork.fulfilled, (state, action) => {
             const { updatedWork } = action.payload;
             state.works = state.works.map(item => (item.id === updatedWork.id ? updatedWork : item));
         });
@@ -48,10 +48,11 @@ export const getWorks = createAsyncThunk('work/get', async (): Promise<IWork[]> 
     const works = (await axios.get('http://localhost:3001/works')).data;
     return works;
 });
-export const getWork = createAsyncThunk('work/getWork', async (itemId): Promise<IWork> => {
+export const getWork = createAsyncThunk('work/getWork', async (itemId: number | string | null): Promise<IWork> => {
     const work = (await axios.get(`http://localhost:3001/works/${itemId}`)).data;
     return work;
 });
+
 
 export const deleteWork = createAsyncThunk('post/delete', async (itemId: number | string): Promise<string | number> => {
     await axios.delete(`http://localhost:3001/works/${itemId}`);
@@ -64,10 +65,9 @@ export const add = createAsyncThunk('post/post', async (payload: PCreateWork): P
     return item;
 });
 
-export const saveChangesAsync = createAsyncThunk('post/saveChanges', async (data: { formValues: any; itemId: string | number }) => {
+export const editWork = createAsyncThunk('post/saveChanges', async (data: { formValues: any; itemId: string | number }) => {
     const { formValues, itemId } = data;
-    await axios.put(`http://localhost:3001/posts/${itemId}`, formValues);
-    const updatedWork = (await axios.get(`http://localhost:3001/posts/${formValues.id}`)).data;
-
+    await axios.put(`http://localhost:3001/works/${itemId}`, formValues);
+    const updatedWork = (await axios.get(`http://localhost:3001/works/${formValues.id}`)).data;
     return { updatedWork };
 });

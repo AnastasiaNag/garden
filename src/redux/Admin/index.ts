@@ -11,7 +11,7 @@ export interface IAdmin {
 
 const initialState: CounterState = {
     admin: {
-        pas: ''
+        pas: '1'
     },
 };
 
@@ -31,7 +31,7 @@ export const counterSlice = createSlice({
 
 export default counterSlice.reducer;
 
-export const getAdmin = createAsyncThunk('work/get', async (): Promise<IAdmin> => {
-    const admin = (await axios.get('http://localhost:3001/admin')).data;
+export const getAdmin = createAsyncThunk('admin/get', async (): Promise<IAdmin> => {
+    const admin = (await axios.get('http://localhost:3001/admin')).data[0];
     return admin;
 });
