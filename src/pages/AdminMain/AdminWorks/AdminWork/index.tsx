@@ -1,5 +1,5 @@
 import { Card, CardActionArea, IconButton } from '@mui/material';
-import { IWork } from '../../../redux/Work/types';
+import { IWork } from '../../../../redux/Work/types';
 import { useState } from 'react';
 
 interface Props {
@@ -20,7 +20,7 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
     setIsEdit(true);
   };
 
-  const onChange = (event : any) => {
+  const onChange = (event: any) => {
     const key = event.target.name;
     const value = event.target.value;
     setFormValues({ ...formValues, [key]: value });

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, deleteWork, editWork, getWorks } from '../../redux/Work';
-import { AppDispatch, RootState } from '../../redux/store';
+import { add, deleteWork, editWork, getWorks } from '../../../redux/Work';
+import { AppDispatch, RootState } from '../../../redux/store';
 import AdminWork from './AdminWork';
 import { Modal } from '@mui/material';
-import { PCreateWork } from '../../redux/Work/types';
+import { PCreateWork } from '../../../redux/Work/types';
 import { Breadcrumbs, Typography, Link, TextField } from '@mui/material';
 
 const initialState = { title: '', text: '', contentUrl: '' };
@@ -19,7 +19,6 @@ const AdminWorks = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-
   useEffect(() => {
     const getMultWork = async () => {
       dispatch(getWorks());
@@ -27,16 +26,13 @@ const AdminWorks = () => {
     getMultWork();
   }, [dispatch]);
 
-
-  const filteredItems = works.filter((work) => work.title.toLowerCase().includes(value.toLowerCase()))
-
-
+  const filteredItems = works.filter((work) => work.title.toLowerCase().includes(value.toLowerCase()));
 
   const deleteItem = (itemId: any) => {
     dispatch(deleteWork(itemId));
   };
 
-  const onSave = async (formValues : any, itemId: number | string) => {
+  const onSave = async (formValues: any, itemId: number | string) => {
     dispatch(editWork({ formValues, itemId }));
   };
 
