@@ -32,12 +32,10 @@ const routes = createBrowserRouter([
       {
         path: '/works',
         element: <Works />,
-        children: [
-          {
-            path: '/works/:id',
-            element: <WorkItem />,
-          },
-        ],
+      },
+      {
+        path: '/works/:id',
+        element: <WorkItem />,
       },
     ],
   },
