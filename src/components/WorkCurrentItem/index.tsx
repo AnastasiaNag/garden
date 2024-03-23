@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Breadcrumbs, Typography, Link, Card, CardActionArea } from '@mui/material';
 // import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
@@ -17,10 +18,21 @@ const WorkCurrentItem = () => {
   }, []);
 
   return (
+    <>
+    <Breadcrumbs aria-label="breadcrumb">
+    <Link underline="hover" color="inherit" href="/">
+      Домашняя страница
+    </Link>
+    <Link underline="hover" color="inherit" href="/works">
+    Услуги
+    </Link>
+    <Typography color="text.primary">{work?.title}</Typography>
+  </Breadcrumbs>
     <div>
       <h1>{work?.title}</h1>
       <p>{work?.text}</p>
     </div>
+    </>
   );
 };
 

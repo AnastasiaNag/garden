@@ -4,9 +4,13 @@ import { Breadcrumbs, Typography, Link, Card, CardActionArea } from '@mui/materi
 import { AppDispatch, RootState } from '../../redux/store';
 import { useEffect } from 'react';
 import { getWorks } from '../../redux/Work';
+import ItemCard from '../ItemCard';
+import { useNavigate } from 'react-router-dom';
+
 
 const WorksList = () => {
     const { works } = useSelector((state: RootState) => state.work);
+  const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>();
     useEffect(() => {
         const getWork = async () => {
@@ -14,6 +18,11 @@ const WorksList = () => {
         };
         getWork();
     }, [dispatch]);
+
+    const handleItemClick = (id: string) => {
+        console.log(id);
+        navigate(id);
+      };
 
     return (
         <div className="works-list__section section">
@@ -29,12 +38,7 @@ const WorksList = () => {
             <div className="works-list__section__cards">
                 {works.map(item => {
                     return (
-                        <Card className="works-list__section__card">
-                            <CardActionArea >
-                                <div>{item.title}</div>
-                                <div>{item.text}</div>
-                            </CardActionArea>
-                        </Card>
+                        <ItemCard item ={item} handleItemClick={handleItemClick} />
                     );
                 })}
             </div>

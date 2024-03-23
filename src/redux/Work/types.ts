@@ -2,6 +2,7 @@ export interface IWork {
     id: string | number;
     title: string,
     text: string | number,
+    img: string,
 }
 
 export interface CounterState {
@@ -13,4 +14,5 @@ export interface CounterState {
 export interface PCreateWork {
     title: string;
     text: string | number;
+    img: string,
 }

@@ -42,8 +42,17 @@ table {
 	border-spacing: 0;
 }
 
+	$main-color: #1B2316;
+	$font-color: #FFFFFFBF;
+	$card-color:#FFFFFF0D;
+
 * {
-	font-family: "Alegreya Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
+  }
+
+  body {
+	background-color: $main-color;
+	color: $font-color;
   }
   a {
 	text-decoration: none;
@@ -75,19 +84,16 @@ table {
   
   .h5 {
 	font-size: 22px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 200;
   }
   
   .h6 {
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 100;
   }
   .h7 {
 	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 100;
   }
 
   .section{

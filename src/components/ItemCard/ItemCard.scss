@@ -1,0 +1,37 @@
+@import '../../index.scss';
+
+.item{
+    &__card{
+        display: flex;
+        flex-direction: column;
+        height: 240px;
+        width: 180px;
+        padding: 5px 10px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        border: 1px solid $card-color;
+        box-shadow: 0px 9px 18.399999618530273px 0px #00000040;
+        background: $card-color;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 0px 20px 1px #ffbb7616;
+          }
+    }
+    &__img{
+        display: flex;
+        height: 150px;
+        width: fit-content;
+        background: transparent;
+    } 
+    &__description{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-self: flex-start;
+        padding-left: 15px;
+    }
+    
+}

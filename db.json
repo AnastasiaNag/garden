@@ -1,109 +1,125 @@
 {
-  "goods": [
+    "goods": [
     {
       "id": "c2320d",
-      "title": "qqq",
-      "text": "wqqwqwqew",
-      "contentUrl": ""
+      "title": "вкив",
+      "text": "ивкв",
+      "img": "../../img/item.png"
     },
     {
       "id": "bcarg5b",
-      "title": "eeewttttt",
-      "text": "eerer",
-      "contentUrl": ""
+      "title": "ив",
+      "text": "тыыетые",
+      "img": "./src/img/item.png"
     },
     {
       "id": "bcagr5b",
-      "title": "eeewttttt",
-      "text": "eerer",
-      "contentUrl": ""
+      "title": "лшщощо",
+      "text": "икивие",
+      "img": "./src/img/item.png"
     },
     {
       "id": "bc5agrb",
-      "title": "eeewttttt",
+      "title": "ыиеие",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
     },
     {
       "id": "bgsraec5b",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
     },
     {
       "id": "bcrefgrs5b",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
     },
     {
       "id": "bc5bdrge",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
     },
     {
       "id": "bc5rwgb",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
     },
     {
       "id": "bcgt5b",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "bcweff5b",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "bcggr5b",
       "title": "eeewttttt",
       "text": "eerer",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "bc4xsr6",
       "title": "hduwiedhewcrfr",
       "text": "vddcsce",
-      "contentUrl": ""
+      "img": "./src/img/item.png"
+
     }
   ],
+
   "works": [
     {
       "id": "fwopp",
-      "title": "raotrdvrd",
-      "text": "eerer",
-      "contentUrl": ""
+      "title": "иыеетн",
+      "text": "ыиееееееееоые",
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "bcc6",
-      "title": "iiiej",
-      "text": "jiwijrijois"
+      "title": "ыетт",
+      "text": "шщошщыко",
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "2057",
-      "title": "nnirnini",
-      "text": "jijioejiosoi"
+      "title": "льщшыо",
+      "text": "лщклыщз",
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "16e3",
       "title": "",
-      "text": "ege"
+      "text": "ege",
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "a0fa",
       "title": "рол",
-      "text": "иотбь"
+      "text": "иотбь",
+      "img": "./src/img/item.png"
+
     },
     {
       "id": "5b22",
       "title": "bft",
-      "text": ""
+      "text": "",
+      "img": "./src/img/item.png"
+
     }
   ],
   "admin": [

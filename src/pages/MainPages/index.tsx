@@ -8,7 +8,7 @@ const MainPages = () => {
     <div>
       <Header />
           <Outlet />
-        <Footer />
+      <Footer />
     </div>
   );
 };

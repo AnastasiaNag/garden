@@ -7,7 +7,7 @@ import { Modal } from '@mui/material';
 import { PCreateWork } from '../../../redux/Work/types';
 import { Breadcrumbs, Typography, Link, TextField } from '@mui/material';
 
-const initialState = { title: '', text: '', contentUrl: '' };
+const initialState = { title: '', text: '', img: '' };
 
 const AdminWorks = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -46,6 +46,7 @@ const AdminWorks = () => {
     const payload: PCreateWork = {
       title: formValues.title,
       text: formValues.text,
+      img: formValues.img,
     };
     dispatch(add(payload));
     handleClose();

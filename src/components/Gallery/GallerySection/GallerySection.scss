@@ -1,34 +1,44 @@
-$dark-green: rgb(8, 75, 26);
+@import '../../../index.scss';
 
 .gallery {
-    &__section {
-        flex-direction: column;
-        gap: 20px;
-    }
     &__carousel {
         display: flex;
-        height: 280px;
-        border: 1px solid $dark-green;
-        border-radius: 7px;
+        border: 1px solid $card-color;
+        border-radius: 15px;
         margin: 0 auto;
         max-width: 1200px;
-        background-color: rgb(255, 255, 255);
-        & &__title {
+        &__title {
             display: flex;
-            margin: 0 auto;
-            width: 250px;
-            height: 100%;
+            align-items: center;
+            cursor: pointer;
+            width: 230px;
+            height: inherit;
             min-width: 150px;
-            background-color: $dark-green;
-            color: bisque;
-            text-align: center;
+            padding: 0 15px;
+            background-color: $card-color;
+            border-radius: 15px;
+            &__text{
+                display: inline-block;
+                transition: 0.3s ease-out;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size .3s;
+                color: white;
+                &:hover{
+                    background-size: 100% 2px;
+                }
+            }
         }
-        & &-items {
+        &-items {
             display: flex;
-            gap: 20px;
-            padding: 20px 40px;
+            justify-content: center;
+            align-items: center;
             max-width: 850px;
             width: 100%;
+            gap: 15px;
+            padding: 0 20px;
         }
     }
 }
