@@ -1,4 +1,3 @@
-import { Card, CardActionArea, IconButton } from '@mui/material';
 import { IWork } from '../../../../redux/Work/types';
 import { useState } from 'react';
 
@@ -35,31 +34,31 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
   };
 
   return (
-    <Card className="works-list__section__card">
+    <div className="admin__card card">
       {!isEdit ? (
         <>
-          <CardActionArea>
-            <div>{item.title}</div>
-            <div>{item.text}</div>
-          </CardActionArea>
-          <button onClick={deleteItem}>удалить</button>
-          <button onClick={setEditMode}>редактировать</button>
+          <div className="h6">{item.title}</div>
+          <div>{item.text}</div>
+          <button className="admin__utils__btn" onClick={setEditMode}>
+            редактировать
+          </button>
+          <button style={{ backgroundColor: 'rgb(207, 72, 49)' }} className="admin__utils__btn" onClick={deleteItem}>
+            удалить
+          </button>
         </>
       ) : (
         <>
-          <CardActionArea>
-            <input name="title" type="text" onChange={onChange} value={formValues?.title} />
-            <input name="text" type="text" onChange={onChange} value={formValues?.text} />
-          </CardActionArea>
-          <IconButton color="success" className="actions__icon-btn btn" onClick={saveChanges}>
-            save
-          </IconButton>
-          <IconButton color="error" className="actions__icon-btn btn" onClick={cancelChanges}>
-            cancel
-          </IconButton>
+          <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} />
+          <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} />
+          <button className="admin__utils__btn" onClick={saveChanges}>
+            Сохранить
+          </button>
+          <button style={{ backgroundColor: 'rgb(207, 72, 49)' }} className="admin__utils__btn" onClick={cancelChanges}>
+            Отменить
+          </button>
         </>
       )}
-    </Card>
+    </div>
   );
 };
 

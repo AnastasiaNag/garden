@@ -5,7 +5,8 @@ import { AppDispatch, RootState } from '../../../redux/store';
 import AdminWork from './AdminWork';
 import { Modal } from '@mui/material';
 import { PCreateWork } from '../../../redux/Work/types';
-import { Breadcrumbs, Typography, Link, TextField } from '@mui/material';
+import { Breadcrumbs, Typography, Link } from '@mui/material';
+import '../Admin.scss';
 
 const initialState = { title: '', text: '', img: '' };
 
@@ -48,29 +49,54 @@ const AdminWorks = () => {
       text: formValues.text,
       img: formValues.img,
     };
+    if (!payload.title || !payload.text || !payload.img) {
+      alert('Пожалуйста, заполните все поля');
+      return;
+    }
     dispatch(add(payload));
     handleClose();
+    setFormValues(initialState);
   };
 
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/admin">
-          Выбор категории
-        </Link>
-        <Typography color="text.primary">Услуши</Typography>
-      </Breadcrumbs>
-      <TextField placeholder="Поиск" onChange={(e) => setValue(e.target.value)} />
-      {filteredItems.map((item) => {
-        return <AdminWork item={item} onDelete={deleteItem} saveItem={onSave} />;
-      })}
-      <button onClick={handleOpen}>Добавить</button>
-      <Modal open={open} onClose={handleClose}>
-        <>
-          <input value={formValues.title} autoFocus type="text" placeholder="Title" onChange={onChange} name="title" />
-          <input value={formValues.text} autoFocus type="text" placeholder="Text" onChange={onChange} name="text" />
-          <button onClick={addItem}>Добавить</button>
-        </>
+      <div className="admin__section section">
+        <div className="section__breadcrumb">
+          <Breadcrumbs aria-label="breadcrumb" className="section__breadcrumb">
+            <Link className="section__breadcrumb__last" underline="hover" color="inherit" href="/admin/panel">
+              Выбор категории
+            </Link>
+            <Typography className="section__breadcrumb__current" color="text.primary">
+              Услуги
+            </Typography>
+          </Breadcrumbs>
+        </div>
+        <div className="admin__input">
+          <input className="admin__utils admin__utils__search" placeholder="Поиск" onChange={(e) => setValue(e.target.value)} />
+          <button className="admin__utils__btn admin__utils" onClick={handleOpen}>
+            Добавить
+          </button>
+        </div>
+        {filteredItems.map((item) => {
+          return <AdminWork item={item} onDelete={deleteItem} saveItem={onSave} />;
+        })}
+      </div>
+      <Modal className="admin__modal" open={open} onClose={handleClose}>
+        <div className="admin__modal" onKeyDown={(event) => (event.key === 'Enter' ? addItem() : false)}>
+          <input className="admin__utils" value={formValues.title} autoFocus type="text" placeholder="Title" onChange={onChange} name="title" />
+          <textarea
+            className="admin__utils admin__utils__text"
+            value={formValues.text}
+            autoFocus
+            placeholder="Text"
+            onChange={onChange}
+            name="text"
+            rows={20}
+          />
+          <button className="admin__utils__btn admin__utils" onClick={addItem}>
+            Добавить
+          </button>
+        </div>
       </Modal>
     </>
   );

@@ -35,7 +35,7 @@ const Gallery = () => {
   return (
     <>
       <div className="gallery__section section">
-        <div className="gallery__section__title h2">Мы предлагаем</div>
+        <div className="gallery__section__title title h2">Мы предлагаем</div>
       <GallerySection type={'works'} title={'услуги'} items={works} handleClick={() => handleClick('works')} handleItemClick={handleWorksClick} />
       <GallerySection type={'goods'} title={'товары'} items={goods} handleClick={() => handleClick('goods')} handleItemClick={handleGoodsClick} />
       </div>

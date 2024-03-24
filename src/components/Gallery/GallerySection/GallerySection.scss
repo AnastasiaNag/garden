@@ -7,16 +7,23 @@
         border-radius: 15px;
         margin: 0 auto;
         max-width: 1200px;
+        background-color: $main-color;
         &__title {
             display: flex;
             align-items: center;
+            justify-content: center;
             cursor: pointer;
             width: 230px;
             height: inherit;
             min-width: 150px;
             padding: 0 15px;
-            background-color: $card-color;
             border-radius: 15px;
+	        transition: all ease 0.3s;
+        background-color: $card-color;
+
+            &:hover {
+                box-shadow:inset 0px 0px 20px 1px #ffbb7616;
+              }
             &__text{
                 display: inline-block;
                 transition: 0.3s ease-out;
@@ -35,10 +42,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            max-width: 850px;
+            max-width: 800px;
             width: 100%;
             gap: 15px;
-            padding: 0 20px;
         }
     }
 }
