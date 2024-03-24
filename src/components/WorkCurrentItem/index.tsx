@@ -33,7 +33,7 @@ const WorkCurrentItem = () => {
       <div className="work-item__content">
         <div className="work-item__title title h2">{work?.title}</div>
         <div className="work-item__text card">
-          <img className="work-item__img" src={require('../../img/item.png')} alt="" />
+          <img className="work-item__img" src={work.img} alt="" />
           {work?.text}
           </div>
       </div>
