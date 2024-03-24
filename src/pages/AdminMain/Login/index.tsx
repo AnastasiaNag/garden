@@ -27,6 +27,7 @@ const Admin = () => {
   const login = () => {
     if (formValues.login === admin.login && formValues.password === admin.password) {
       localStorage.setItem('isAuthenticated', 'true');
+      console.log(localStorage.getItem('isAuthenticated'));
       navigate('/admin/panel');
     } else {
       alert('Неверный логин или пароль');

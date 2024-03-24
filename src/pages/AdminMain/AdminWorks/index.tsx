@@ -20,6 +20,8 @@ const AdminWorks = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  console.log(localStorage.getItem('isAuthenticated'));
+
   useEffect(() => {
     const getMultWork = async () => {
       dispatch(getWorks());
