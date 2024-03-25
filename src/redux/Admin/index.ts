@@ -6,12 +6,14 @@ export interface CounterState {
 }
 
 export interface IAdmin {
-    pas: string | number;
+    password: string | number;
+    login: string | number;
 }
 
 const initialState: CounterState = {
     admin: {
-        pas: '1'
+        password: '',
+        login: ''
     },
 };
 

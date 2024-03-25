@@ -1,25 +1,71 @@
+@import '../../../../index.scss';
+
 .gallery {
     &__btn {
-        border-radius: 25px;
-        box-shadow: 0px 0px 4px #303030;
-        font-family: Arial;
-        color: #000000;
-        font-size: 23px;
-        background: #ffffff;
-        padding: 30px 10px 30px 10px;
-        text-decoration: none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: transparent;
+        border: 1px solid $font-color;
+        height: 60px;
+        border-radius: 15px;
+        cursor: pointer;
         &:hover {
-            background: #dbdbdb;
-            text-decoration: none;
+            background:#ffbb763c;
         }
     }
-    &__carousel {
-        & &-item {
+    &__further__text{
+        display: flex;
+        padding: 20px 50px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        border: 1px solid $card-color;
+        box-shadow: 0px 9px 18.399999618530273px 0px #00000040;
+        background-color: $card-color;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 0px 20px 1px #ffbb7616;
+          }
+    }
+}
+
+.swiper{
+    & &-button{
+        &-prev{
+            color: white;
+            left: 0;
+            width: 50px;
+            &:after{
+                font-size: 60px;
+            }
+        }
+        &-next{
+            color: white;
+            right: -5px;
+            width: 50px;
+            &:after{
+                font-size: 60px;
+            }
+        }
+        
+        &-disabled{
+            display: none;
+        }
+    }
+    & &-wrapper{
+       padding: 10px 0;
+       margin: 0 26px;
+    }
+    & &-slide{
+        &__further{
             display: flex;
-            width: 200px;
-            flex-shrink: 0;
-            height: 230px;
-            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            margin: auto 0;
         }
     }
 }
+

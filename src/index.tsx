@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import './index.scss';
 import MainPages from './pages/MainPages';
 import Login from './pages/AdminMain/Login';
+import GoodItem from './pages/GoodItem';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const isAuthenticated = Boolean(localStorage.getItem('isAuthenticated'));
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
       {
         path: '/goods',
         element: <Goods />,
+      },
+      {
+        path: '/goods/:id',
+        element: <GoodItem />,
       },
       {
         path: '/works',

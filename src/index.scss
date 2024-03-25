@@ -42,8 +42,17 @@ table {
 	border-spacing: 0;
 }
 
+	$main-color: #1B2316;
+	$font-color: #FFFFFFBF;
+	$card-color:#FFFFFF0D;
+
 * {
-	font-family: "Alegreya Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
+  }
+
+  body {
+	background-color: $main-color;
+	color: $font-color;
   }
   a {
 	text-decoration: none;
@@ -75,22 +84,50 @@ table {
   
   .h5 {
 	font-size: 22px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 200;
   }
   
   .h6 {
 	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 100;
   }
   .h7 {
 	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
+	font-weight: 100;
   }
-
+  .card{ 
+	  border-radius: 30px;
+	  border: 1px solid $card-color;
+	  box-shadow: 0px 9px 18.399999618530273px 0px #00000040;
+	  background: $card-color;
+	  backdrop-filter: blur(5px);
+	  transition: all ease 0.3s;
+	  &:hover {
+		  box-shadow: 0px 0px 20px 1px #ffbb7616;
+		}
+  }
   .section{
 	display: flex;
 	padding: 20px;
+	& &__breadcrumb{
+		align-self: flex-start;
+		color: white;
+		&__last{
+			color: $font-color;
+		}
+		&__current{
+			color: white;
+		}
+	}
   }
+.title{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 20px;
+		color: white;
+		border-left: 3px solid $card-color;
+		border-right: 3px solid $card-color;
+		border-top-left-radius: 40px;
+		border-bottom-right-radius: 40px;
+}

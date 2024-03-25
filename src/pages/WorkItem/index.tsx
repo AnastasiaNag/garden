@@ -4,6 +4,7 @@ import './WorkItem.scss';
 const Works = () => {
   return (
     <div>
+
       <div>
         <WorkCurrentItem />
       </div>

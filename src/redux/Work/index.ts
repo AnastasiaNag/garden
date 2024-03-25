@@ -10,7 +10,8 @@ const initialState: CounterState = {
     work: {
         id: '',
         title: '',
-        text: ''
+        text: '',
+        img: ''
     },
 };
 

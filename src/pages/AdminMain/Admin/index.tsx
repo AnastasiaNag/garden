@@ -1,13 +1,21 @@
+import { useNavigate } from 'react-router-dom';
+import '../Admin.scss'
 const Admin = () => {
-  const handleClick = () => {
-    window.open('/admin/works', '_blank');
-  };
+  const navigate = useNavigate();
 
+  const handleClick = (page: string) => {
+    navigate(`/admin/${page}`);
+  };
+const logout = () => {
+  localStorage.setItem('isAuthenticated', 'false');
+  navigate('/admin');
+}
   return (
-    <>
-      <button onClick={handleClick}>Изменить товары</button>
-      <button>Выйти</button>
-    </>
+    <div className="admin__panel section">
+      <button className="admin__utils__btn admin__utils" onClick={()=>handleClick('works')}>Изменить товары</button>
+      <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('works')}>Изменить товары</button>
+      <button onClick={logout} style={{backgroundColor: 'rgb(207, 72, 49)'}} className="admin__utils__btn admin__utils">Выйти</button>
+    </div>
   );
 };
 
