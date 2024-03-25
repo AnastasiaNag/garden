@@ -22,6 +22,11 @@ const Article = () => {
           imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
           text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
         />
+        <ArticleItem
+          url="https://www.google.ru/"
+          imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
+        />
       </div>
     </section>
   );
