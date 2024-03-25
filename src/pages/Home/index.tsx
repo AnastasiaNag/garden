@@ -4,6 +4,7 @@ import Employee from '../../components/Employee';
 import Footer from '../../components/Footer';
 import './Home.scss';
 import Article from '../../components/Article';
+import { Element } from 'react-scroll';
 
 const Home = () => {
     return (
@@ -21,7 +22,8 @@ const Home = () => {
                 <Article />
             </div>
             <div>
-                <Footer />
+            <Element name="Footer"> <Footer /> </Element>
+                
             </div>
         </div>
     );

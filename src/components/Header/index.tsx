@@ -1,30 +1,27 @@
 import './Header.scss';
+import { scroller } from 'react-scroll';
 
 const Header = () => {
   return (
     <div className="header">
-      <div className="header__up">
-        <div className="buttons">
-          <button className="buttons__up">Рязановский</button>
-          <button className="buttons__up">Помощь покупателям</button>
-          <button className="buttons__up">Система скидок</button>
-          <button className="buttons__up">Вакансии</button>
-          <button className="buttons__up">Бесплатная доставка</button>
+        <div className="logo">
+            <div className="logo__img">
+                <img src="img/plant1.png" alt="logo" />
+            </div>
+            <div className="logo__name">Planto.</div>
         </div>
-        <div className="number">8 (800) 555 35-35</div>
-      </div>
-      <div className="header__down">
-        <img src="/img/poro.jpg" alt="poro" className="header__down-img" />
-        <nav className="header__nav">
-          <div className="header__nav-btn">ОЗЕЛЕНЕНИЕ УЧАСТКА</div>
-          <div className="header__nav-btn">УСЛУГИ САДОВНИКА</div>
-          <div className="header__nav-btn">ИНТЕРЬЕРНЫЕ РАСТЕНИЯ</div>
-          <div className="header__nav-btn">О КОМПАНИИ</div>
-          <div className="header__nav-btn">КОНТАКТЫ</div>
-        </nav>
-      </div>
+        <div className="main-menu">
+            <button onClick={() => scroller.scrollTo('Footer', {duration: 800, smooth: true})} className="main-menu__home">Home</button>
+            <button onClick={() => scroller.scrollTo('Footer', {duration: 800, smooth: true})} className="main-menu__plantstype">Plants Type</button>
+            <button onClick={() => scroller.scrollTo('Footer', {duration: 800, smooth: true})} className="main-menu__more">More</button>
+            <button onClick={() => scroller.scrollTo('Footer', {duration: 800, smooth: true})} className="main-menu__contact">Contact</button>
+        </div>
+        <div className="right-menu">
+            <img src="img/lupa.png" alt="" className="right-menu__search" />
+            <img src="img/sumka.png" alt="" className="right-menu__cart" />
+            <img src="img/poloska.png" alt="" className="right-menu__burgermenu" />
+        </div>
     </div>
-  );
+  )
 };
-
 export default Header;

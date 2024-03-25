@@ -1,0 +1,75 @@
+// // @import 'mixins.scss';
+
+// .header__up{
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 3px 20px;
+//     background-color: #292929;
+//     color: white;
+// }
+// .buttons{
+//     display: flex;
+//     gap: 20px;
+//     &__up{
+//         background-color: #292929;
+//         cursor: pointer;
+//         color: white;
+//     }
+// }
+// .header__down{
+//     padding: 3px 20px;
+//     color: white;
+//     display: flex;
+//     background-color: #434343;
+//     justify-content: space-around;
+//     &-img{
+//         height: 50px;
+//     }
+// }
+
+// .header__nav{
+//     display: flex;
+//     gap: 20px;
+//     align-items: center;
+// }
+// .block {
+//     &__btn {
+
+//         padding: 10px 10px;
+//         cursor: pointer;
+//         min-width: 180px;
+//         margin-top: 10px;
+//         position: relative;
+
+//     }
+
+//     &__menu {
+//         display: flex;
+//         flex-direction: column;
+//         position: absolute;
+//         background-color: black;
+//         width: 180px;
+//         animation: slideDown 0.3s forwards;
+//         &.active {}
+//     }
+// }
+// @keyframes slideDown{
+//     0% {
+//         opacity: 0;
+//         transform: translateY(-10px);
+//       }
+//       100% {
+//         opacity: 1;
+//         transform: translateY(0);
+//       }
+// }
+
+
+
+// .menu__item{
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: white  solid 1px;
+// }
