@@ -1,0 +1,94 @@
+// import './Header.scss';
+// import React, {useState} from 'react';
+
+
+// const Header = () => {
+//   const [menuState, setMenuState] = useState({
+//     isMenuOpen1: false,
+//     isMenuOpen2: false,
+//     isMenuOpen3: false,
+//     isMenuOpen4: false,
+//   });
+
+//   const toggleMenu1 = () => {
+//     setMenuState({ ...menuState, isMenuOpen1: !menuState.isMenuOpen1 });
+//   };
+//   const toggleMenu2 = () => {
+//     setMenuState({ ...menuState, isMenuOpen2: !menuState.isMenuOpen2 });
+//   };
+
+//   const toggleMenu3 = () => {
+//     setMenuState({ ...menuState, isMenuOpen3: !menuState.isMenuOpen3 });
+//   };
+//   const toggleMenu4 = () => {
+//     setMenuState({ ...menuState, isMenuOpen4: !menuState.isMenuOpen4 });
+//   };
+
+
+
+//   return (
+//     <div className="header">
+//       <div className="header__up">
+//         <div className="buttons">
+//           <button className="buttons__up">Рязановский</button>
+//           <button className="buttons__up">Помощь покупателям</button>
+//           <button className="buttons__up">Система скидок</button>
+//           <button className="buttons__up">Вакансии</button>
+//           <button className="buttons__up">Бесплатная доставка</button>
+//         </div>
+//         <div className="number">8 (800) 555 35-35</div>
+//       </div>
+//       <div className="header__down">
+//         <img src="/img/poro.jpg" alt="poro" className="header__down-img" />
+//         <nav className="header__nav">
+//           <div className="block">
+//           <button onClick={toggleMenu1} className="block__btn">ОЗЕЛЕНЕНИЕ УЧАСТКА</button>
+//           {menuState.isMenuOpen1 && (
+//           <div className={`block__menu ${menuState.isMenuOpen1 ? 'active' : ''} `}>
+//           <li className="menu__item">1</li>
+//           <li className="menu__item">2</li>
+//           <li className="menu__item">3</li>
+//           </div>
+//           )}
+//           </div>
+          
+
+//           <div className="block">
+//           <button onClick={toggleMenu2} className="block__btn">УСЛУГИ САДОВНИКА</button>
+//           {menuState.isMenuOpen2 && (
+//           <div className={`block__menu ${menuState.isMenuOpen2 ? 'active' : ''} `}>
+//           <li className="menu__item">1</li>
+//           <li className="menu__item">2</li>
+//           <li className="menu__item">3</li>
+//           </div>
+//           )}
+//           </div>
+
+//           <div className="block">
+//           <button onClick={toggleMenu3} className="block__btn">О КОМПАНИИ</button>
+//           {menuState.isMenuOpen3 && (
+//           <div className={`block__menu ${menuState.isMenuOpen3 ? 'active' : ''} `}>
+//           <li className="menu__item">1</li>
+//           <li className="menu__item">2</li>
+//           <li className="menu__item">3</li>
+//           </div>
+//           )}
+//           </div>
+
+//           <div className="block">
+//           <button onClick={toggleMenu4} className="block__btn">КОНТАКТЫ</button>
+//           {menuState.isMenuOpen4 && (
+//           <div className={`block__menu ${menuState.isMenuOpen4 ? 'active' : ''} `}>
+//           <li className="menu__item">1</li>
+//           <li className="menu__item">2</li>
+//           <li className="menu__item">3</li>
+//           </div>
+//           )}
+//           </div>
+//         </nav>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Header;

@@ -1,35 +1,66 @@
-.header__up{
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
     display: flex;
+    background-color: rgb(5, 80, 5);
+    height: 90px;
     justify-content: space-between;
-    padding: 3px 20px;
-    background-color: #292929;
-    color: white;
 }
-.buttons{
+.logo{
     display: flex;
-    gap: 20px;
-    &__up{
-        background-color: #292929;
-        cursor: pointer;
-        color: white;
-    }
-}
-.header__down{
-    padding: 3px 20px;
-    color: white;
-    display: flex;
-    background-color: #434343;
-    justify-content: space-around;
-    &-img{
+    align-items: center;
+    &__img{
         height: 50px;
     }
+    &__name{
+        font-size: 20px;
+        color: rgb(150, 150, 150);
+    }
 }
-
-.header__nav{
+.main-menu{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    &-btn{
-        padding: 10px 10px;
+    width: 100%;
+    
+    &__home{
         cursor: pointer;
+        font-size: 20px;
+        color: rgb(150, 150, 150);
+        background-color: rgb(5, 80, 5);
+    }
+    &__plantstype{
+        cursor: pointer;
+        font-size: 20px;
+        color: rgb(150, 150, 150);
+        background-color: rgb(5, 80, 5);
+    }
+    &__more{
+        cursor: pointer;
+        font-size: 20px;
+        color: rgb(150, 150, 150);
+        background-color: rgb(5, 80, 5);
+    }
+    &__contact{
+        color: rgb(150, 150, 150);
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgb(5, 80, 5);
+    }
+}
+.right-menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__search{
+
+    }
+    &__cart{
+
+    }
+    &__burgermenu{
+        margin-right: 20px;
     }
 }
