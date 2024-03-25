@@ -22,30 +22,42 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
 }
 
 .article__card {
-    width: 30%;
-    border: 3px solid #017857;
-    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.0509803922);
+    border-radius: 25px;
     padding: 5px;
     margin: 5px;
     cursor: pointer;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.0509803922);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+
+    &:visited {
+        color: white;
+    }
+
 
 
     &_img {
         height: 140px;
         width: 100%;
         overflow: hidden;
+        border-radius: 25px;
     }
 }
 
 .article__card {
     display: inline-block;
-    transition: transform 0.3s ease;
+    box-shadow: 0px 9px 18.3999996185px 0px rgba(0, 0, 0, 0.2509803922);
+    transition: all ease 0.3s;
+
 }
 
 .article__card:hover {
-    transform: scale(1.1);
-    box-shadow: 3px 3px 3px 3px rgba(96, 168, 24, 0.5);
+
+    box-shadow: 0px 0px 20px 1px rgba(255, 187, 118, 0.0862745098);
 }

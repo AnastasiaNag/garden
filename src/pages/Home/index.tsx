@@ -1,7 +1,5 @@
-import Header from '../../components/Header';
 import Gallery from '../../components/Gallery';
 import Employee from '../../components/Employee';
-import Footer from '../../components/Footer';
 import './Home.scss';
 import Article from '../../components/Article';
 import { Element } from 'react-scroll';
@@ -10,9 +8,6 @@ const Home = () => {
     return (
         <div className="main">
             <div>
-                <Header />
-            </div>
-            <div>
                 <Gallery />
             </div>
             <div>
@@ -20,10 +15,6 @@ const Home = () => {
             </div>
             <div>
                 <Article />
-            </div>
-            <div>
-            <Element name="Footer"> <Footer /> </Element>
-                
             </div>
         </div>
     );

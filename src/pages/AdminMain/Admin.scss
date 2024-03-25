@@ -1,0 +1,61 @@
+.admin{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    &__card{
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+    &__modal{
+        display: flex;
+        height: 500px;
+        width: 500px;
+        flex-direction: column;
+        gap: 10px;
+        margin: auto;
+    }
+    &__panel{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__input{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+    }
+    &__utils{
+        height: 30px;
+        width: 160px;
+        padding: 5px 15px;
+        border-radius: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.177);
+        &__search{
+            width: 450px;
+        }
+        &__text{
+            height: 300px;
+            max-width: 500px;
+            width: 100%;
+        }
+        &__btn{
+            height: 30px;
+            width: 190px;
+            padding: 5px 15px;
+            color: black;
+            cursor: pointer;
+            background-color: rgb(233, 170, 88);
+        }
+    }
+}

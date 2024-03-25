@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import type { PayloadAction } from '@reduxjs/toolkit';
 import { CounterState, IGood } from './types';
 import axios from 'axios';
 
@@ -27,6 +26,5 @@ export default counterSlice.reducer;
 
 export const getGoods = createAsyncThunk('item/get', async (): Promise<IGood[]> => {
     const goods = (await axios.get('http://localhost:3001/goods')).data;
-
     return goods;
 });

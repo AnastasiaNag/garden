@@ -1,22 +1,33 @@
-import Header from '../../components/Header';
-import WorksList from '../../components/WorksList';
-import Footer from '../../components/Footer';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import ItemList from '../../components/ItemList';
+import { getWorks } from '../../redux/Work';
+import { RootState, AppDispatch } from '../../redux/store';
 import './Works.scss';
 
-
 const Works = () => {
-    return ( 
-        <div>
-            <div>
-                <Header />
-            </div>
-            <div>
-                <WorksList />
-            </div>
-            <div>
-                <Footer />
-            </div>
-        </div> );
-}
- 
+  const { works } = useSelector((state: RootState) => state.work);
+  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    const getWork = async () => {
+      dispatch(getWorks());
+    };
+    getWork();
+  }, [dispatch]);
+
+  const handleItemClick = (id: string) => {
+    console.log(id);
+    navigate(id);
+  };
+  return (
+    <div>
+      <div>
+        <ItemList text={'Услуги'} items={works} handleItemClick={handleItemClick} />
+      </div>
+    </div>
+  );
+};
+
 export default Works;
