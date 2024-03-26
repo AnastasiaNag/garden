@@ -15,7 +15,7 @@ import Login from './pages/AdminMain/Login';
 import GoodItem from './pages/GoodItem';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-const isAuthenticated = Boolean(localStorage.getItem('isAuthenticated'));
+const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
 
 const routes = createBrowserRouter([
   {
