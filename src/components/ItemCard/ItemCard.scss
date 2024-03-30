@@ -14,9 +14,10 @@
         &__content{
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        justify-content: center;
+        gap: 20px;
         align-items: center;
+        height: inherit;
+        padding: 20px 0;
         }
         }
         
@@ -28,11 +29,9 @@
     } 
     &__description{
         display: flex;
-        flex-direction: column;
         gap: 10px;
         align-self: flex-start;
         padding: 0 10px;
-        text-align: center;
     }
     &__text{
         display: -webkit-box;
@@ -44,5 +43,9 @@
     &__price{
         display: flex;
         align-self: flex-end;
+        border: 1px solid $font-color;
+        border-radius: 30px;
+        gap: 5px;
+        padding: 3px;
     }
 }

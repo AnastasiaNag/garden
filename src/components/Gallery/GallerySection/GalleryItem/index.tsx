@@ -11,7 +11,6 @@ const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
     direction: 'horizontal',
     loop: false,
     slidesPerView: 3,
-    spaceBetween: 20,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -21,7 +20,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
 
   return (
     <>
-      <div className="swiper" style={{ padding: '0 40px', backgroundColor: '#1B2316' }}>
+      <div className="swiper" style={{ padding: '0 10px', backgroundColor: '#1B2316' }}>
         <div className="swiper-wrapper">
           {items.map((item: IGood | IWork, index: number) => {
             if (index <= 4) {
@@ -32,7 +31,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
               );
             } else if (index === 5) {
               return (
-                <div className="swiper-slide swiper-slide__further" onClick={handleClick}>
+                <div className="swiper-slide swiper-slide__further" style={{width: '150px', justifyContent:'flex-start'}} onClick={handleClick}>
                   <div className="gallery__further__text">См. далее</div>
                 </div>
               );

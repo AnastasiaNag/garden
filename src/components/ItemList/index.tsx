@@ -45,7 +45,7 @@ const ItemList = ({ text, items, handleItemClick, isGood }: any) => {
             return <ItemCard item={item} handleItemClick={handleItemClick} isGood={isGood} />;
           })
         ) : (
-          <div className='h5'>Ничего не найдено</div>
+          <div className="h5">Ничего не найдено</div>
         )}
       </div>
     </div>
