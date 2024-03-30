@@ -6,7 +6,8 @@ import Works from './pages/Works';
 import WorkItem from './pages/WorkItem';
 import Admin from './pages/AdminMain/Admin';
 import AdminWorks from './pages/AdminMain/AdminWorks';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AdminGoods from './pages/AdminMain/AdminGoods';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import './index.scss';
@@ -46,15 +47,19 @@ const routes = createBrowserRouter([
   },
   {
     path: '/admin',
-    element: <Login />,
+    element:  isAuthenticated ?<Navigate to="/admin/panel" replace /> : <Login />,
   },
   {
     path: '/admin/panel',
-    element: isAuthenticated ? <Admin /> : <Login />,
+    element: isAuthenticated ? <Admin /> : <Navigate to="/admin" replace />,
   },
   {
     path: '/admin/works',
-    element: isAuthenticated ? <AdminWorks /> : <Login />,
+    element: isAuthenticated ? <AdminWorks /> : <Navigate to="/admin" replace />,
+  },
+  {
+    path: '/admin/goods',
+    element: isAuthenticated ? <AdminGoods /> : <Navigate to="/admin" replace />,
   },
 ]);
 

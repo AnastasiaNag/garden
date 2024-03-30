@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import Swiper from 'swiper';
 import { IWork } from '../../../../redux/Work/types';
 import ItemCard from '../../../ItemCard';
-const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
+const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: false,
@@ -27,7 +27,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick }: any) => {
             if (index <= 4) {
               return (
                 <div className="swiper-slide">
-                  <ItemCard item={item} handleItemClick={handleItemClick} />
+                  <ItemCard item={item} handleItemClick={handleItemClick} isGood={isGood}/>
                 </div>
               );
             } else if (index === 5) {

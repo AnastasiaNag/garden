@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
 import { getWorks } from '../../redux/Work';
 import { RootState, AppDispatch } from '../../redux/store';
-import './Works.scss';
 
 const Works = () => {
   const { works } = useSelector((state: RootState) => state.work);
@@ -24,7 +23,7 @@ const Works = () => {
   return (
     <div>
       <div>
-        <ItemList text={'Услуги'} items={works} handleItemClick={handleItemClick} />
+        <ItemList text={'Услуги'} items={works} handleItemClick={handleItemClick} isGood={false} />
       </div>
     </div>
   );

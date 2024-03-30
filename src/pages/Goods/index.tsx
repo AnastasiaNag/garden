@@ -25,7 +25,7 @@ const Goods = () => {
         <div>
 
             <div>
-            <ItemList text={'Товары'} items={goods} handleItemClick={handleItemClick} />
+            <ItemList text={'Товары'} items={goods} handleItemClick={handleItemClick} isGood={true} />
             </div>
         </div>
     );

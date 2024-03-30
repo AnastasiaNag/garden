@@ -8,12 +8,13 @@ const Admin = () => {
   };
 const logout = () => {
   localStorage.setItem('isAuthenticated', 'false');
-  navigate('/admin');
+  window.open('/admin', '_self');
+  
 }
   return (
     <div className="admin__panel section">
-      <button className="admin__utils__btn admin__utils" onClick={()=>handleClick('works')}>Изменить товары</button>
-      <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('works')}>Изменить товары</button>
+      <button className="admin__utils__btn admin__utils" onClick={()=>handleClick('works')}>Изменить услуги</button>
+      <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('goods')}>Изменить товары</button>
       <button onClick={logout} style={{backgroundColor: 'rgb(207, 72, 49)'}} className="admin__utils__btn admin__utils">Выйти</button>
     </div>
   );
