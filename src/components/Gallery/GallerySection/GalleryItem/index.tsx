@@ -20,7 +20,7 @@ const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
 
   return (
     <>
-      <div className="swiper" style={{ padding: '0 10px', backgroundColor: '#1B2316' }}>
+      <div className="swiper" style={{ padding: '0 15px', backgroundColor: '#1B2316' }}>
         <div className="swiper-wrapper">
           {items.map((item: IGood | IWork, index: number) => {
             if (index <= 4) {

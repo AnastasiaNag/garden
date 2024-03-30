@@ -1,12 +1,15 @@
 import Gallery from '../../components/Gallery';
 import Employee from '../../components/Employee';
+import Main from '../../components/Main';
 import './Home.scss';
 import Article from '../../components/Article';
-import { Element } from 'react-scroll';
 
 const Home = () => {
     return (
         <div className="main">
+            <div>
+                <Main/>
+            </div>
             <div>
                 <Gallery />
             </div>

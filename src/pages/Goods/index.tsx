@@ -18,7 +18,6 @@ const Goods = () => {
     }, [dispatch]);
   
     const handleItemClick = (id: string) => {
-      console.log(id);
       navigate(id);
     };
     return (
