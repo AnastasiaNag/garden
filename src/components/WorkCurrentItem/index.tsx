@@ -5,6 +5,7 @@ import { RootState, AppDispatch } from '../../redux/store';
 import { getWork } from '../../redux/Work';
 import { useParams } from 'react-router-dom';
 import './WorkCurrentItem.scss';
+import Feedback from '../Feedback';
 
 const WorkCurrentItem = () => {
   const { work } = useSelector((state: RootState) => state.work);
@@ -36,6 +37,7 @@ const WorkCurrentItem = () => {
           <img className="work-item__img" src={work.img} alt="" />
           {work?.text}
           </div>
+          <Feedback />
       </div>
     </div>
   );
