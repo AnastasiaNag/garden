@@ -2,139 +2,140 @@
   "goods": [
     {
       "id": "c2320d",
-      "title": "вкив",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Горшки и контейнеры",
+      "title": "Керамический горшок для растений",
+      "text": "Этот уникальный керамический горшок идеален для ваших комнатных или уличных растений. Он оснащен дренажным отверстием, чтобы предотвратить переувлажнение.",
+      "price": 500,
       "img": "/img/item.png"
     },
     {
       "id": "bcarg5b",
-      "title": "ив",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Семена",
+      "title": "Семена подсолнечника",
+      "text": "Эти семена подсолнечника - настоящее удовольствие для садовода. Они легко растут и придадут вашему саду прекрасный вид.",
+      "price": 100,
       "img": "/img/item.png"
-
     },
     {
       "id": "bcagr5b",
-      "title": "лшщощо",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовый инструмент",
+      "title": "Садовые ножницы",
+      "text": "Эти садовые ножницы - необходимый инструмент для каждого садовода. Они прочные и идеальны для обрезки мелких веток и стеблей.",
+      "price": 700,
       "img": "/img/item.png"
-
     },
     {
       "id": "bc5agrb",
-      "title": "ыиеие",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Декор",
+      "title": "Садовый гном",
+      "text": "Добавьте в ваш сад шарм с помощью этого очаровательного садового гнома. Он изготовлен из прочного полирезина и раскрашен вручную для уникального финиша.",
+      "price": 1500,
       "img": "/img/item.png"
     },
     {
       "id": "bgsraec5b",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовый инструмент",
+      "title": "Поливной шланг",
+      "text": "Этот поливной шланг - отличный выбор для полива вашего сада. Он прочный и имеет регулируемую насадку для точного полива.",
+      "price": 800,
       "img": "/img/item.png"
     },
     {
       "id": "bcrefgrs5b",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Удобрения",
+      "title": "Органическое удобрение",
+      "text": "Это органическое удобрение идеально для питания ваших растений. Оно безопасно для окружающей среды и способствует росту здоровых растений.",
+      "price": 300,
       "img": "/img/item.png"
-
     },
     {
       "id": "bc5bdrge",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Защита растений",
+      "title": "Средство от вредителей",
+      "text": "Это средство от вредителей поможет защитить ваши растения от вредных насекомых. Оно безопасно для растений и окружающей среды.",
+      "price": 400,
       "img": "/img/item.png"
-
     },
     {
       "id": "bc5rwgb",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовые аксессуары",
+      "title": "Садовые перчатки",
+      "text": "Эти садовые перчатки защитят ваши руки при работе в саду. Они изготовлены из прочного материала и имеют удобную посадку.",
+      "price": 200,
       "img": "/img/item.png"
-
     },
     {
       "id": "bcgt5b",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовые мебель",
+      "title": "Садовый стул",
+      "text": "Этот садовый стул - отличный выбор для отдыха на природе. Он изготовлен из прочного материала и имеет удобное сиденье.",
+      "price": 2500,
       "img": "/img/item.png"
-
     },
     {
       "id": "bcweff5b",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовые аксессуары",
+      "title": "Садовый фонарь",
+      "text": "Этот садовый фонарь придаст вашему саду волшебный вид в темное время суток. Он изготовлен из прочного материала и имеет долговечную свечу.",
+      "price": 1200,
       "img": "/img/item.png"
-
     },
     {
       "id": "bcggr5b",
-      "title": "eeewttttt",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "category": "Садовые аксессуары",
+      "title": "Садовый зонтик",
+      "text": "Этот садовый зонтик защитит вас от солнца в жаркие дни. Он изготовлен из прочного материала и имеет удобную ручку.",
+      "price": 3000,
       "img": "/img/item.png"
-
-    },
-    {
-      "id": "bc4xsr6",
-      "title": "hduwiedhewcrfr",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "img": "/img/item.png"
-
     }
   ],
   "works": [
     {
       "id": "fwopp",
-      "title": "Как вырастить дерево",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, jconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Посадка деревьев",
+      "text": "Наша команда профессионалов высадит деревья в вашем саду или на участке. Мы поможем выбрать подходящие деревья, учитывая климатические условия вашего региона, особенности почвы и ваши личные предпочтения. Наши специалисты позаботятся о правильной посадке деревьев, обеспечат их надлежащим уходом и дадут рекомендации по дальнейшему содержанию. Цена: 1000 рублей за дерево.",
       "img": "/img/item.png"
-
     },
     {
       "id": "bcc6",
-      "title": "ыетт",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Уход за газоном",
+      "text": "Мы предлагаем полный комплекс услуг по уходу за газоном: кошение, полив, подкормка, удаление сорняков и прочее. Наши специалисты обладают необходимыми знаниями и навыками, чтобы сохранить ваш газон зеленым и красивым в течение всего сезона. Мы используем только качественные удобрения и средства защиты растений, безопасные для окружающей среды. Цена: 500 рублей за сотку.",
       "img": "/img/item.png"
-
     },
     {
       "id": "2057",
-      "title": "льщшыо",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Обрезка кустов",
+      "text": "Наши специалисты профессионально обрежут кусты в вашем саду, придадут им красивую форму и уберегут от болезней. Мы знаем, когда и как правильно обрезать различные виды кустов, чтобы они лучше росли и плодоносили. После обрезки мы уберем все отходы и очистим территорию. Цена: 800 рублей за час.",
       "img": "/img/item.png"
-
     },
     {
       "id": "16e3",
-      "title": "",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Уборка территории",
+      "text": "Мы вывозим мусор, сухие листья, ветки и другие отходы с вашей территории. Наши специалисты оснащены необходимым оборудованием и инструментами, чтобы выполнить работу быстро и качественно. Мы также можем оказать услуги по уборке территории после строительства или ремонта. Цена: 300 рублей за час.",
       "img": "/img/item.png"
-
     },
     {
       "id": "a0fa",
-      "title": "рол",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Полив растений",
+      "text": "Мы профессионально позаботимся о поливе ваших растений, будь то цветы, кусты или деревья. Наши специалисты знают, сколько воды нужно растениям в зависимости от их вида, возраста и погодных условий. Мы также можем установить автоматическую систему полива, которая будет поддерживать оптимальный уровень влажности почвы. Цена: 400 рублей за час.",
       "img": "/img/item.png"
-
     },
     {
       "id": "5b22",
-      "title": "bft",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Уход за клумбами",
+      "text": "Наши специалисты позаботятся о ваших клумбах: выкопают, удобрят, посадят цветы и кустарники, уберегут от болезней и вредителей. Мы можем создать для вас уникальный дизайн клумбы, которая будет гармонично вписываться в ландшафт вашего сада. Цена: 1000 рублей за клумбу.",
       "img": "/img/item.png"
-
     },
     {
       "id": "86ff",
-      "title": "Как полить цветы",
-      "text": "fooidmvmd\nnvisodmpo,\navmoifmvp[,d\ncmopa[e;C\nNRAPOVMCD,\nACMPOAO,][C\nQMVQPOMA]\n;AMV]R\nV,L[RA\nM\\R\nMOAVM\n,RAOVMRO\nAMV\nORMB\nOMVOR\nMAV\nMR\nAM\nVMR\nOAMV\nRMV\nRAOMV\nAMOV\nAVO\nARMV\nRAMV\nAOMR\nOVAMRO\nVAM\nRMV\nORMV\nMR\nAMVO\nRAMV\nRMO\nAMV\nOMR\nOMOR\n",
+      "title": "Уход за декоративными прудами",
+      "text": "Мы предлагаем услуги по уходу за декоративными прудами: чистка, очистка воды, поддержание оптимального уровня кислорода, уход за водными растениями и рыбами. Наши специалисты обладают необходимыми знаниями и навыками, чтобы сохранить ваш пруд чистым и красивым. Цена: 1500 рублей за пруд.",
       "img": "/img/item.png"
     },
     {
       "id": "a8a3",
-      "title": "Как полить цветы",
-      "text": "\nfooidmvmd\nnvisodmpo,\navmoifmvp[,d\ncmopa[e;C\nNRAPOVMCD,\nACMPOAO,][C\nQMVQPOMA]\n;AMV]R\nV,L[RA\n\nM\\R\nMOAVM\n,RAOVMRO\nAMV\nORMB\nOMVOR\nMAV\nMR\nAM\nVMR\nOAMV\nRMV\nRAOMV\nAMOV\nAVO\nARMV\nRAMV\nAOMR\nOVAMRO\nVAM\nRMV\nORMV\nMR\nAMVO\nRAMV\nRMO\nAMV\nOMR\nOMOR\n",
+      "title": "Уход за розами",
+      "text": "Наши специалисты позаботятся о ваших розах: обрежут, удобрят, обработают от болезней и вредителей, посадят новые растения. Мы знаем, как создать красивый и здоровый розарий, который будет радовать вас и ваших гостей. Цена: 1200 рублей за куст.",
       "img": "/img/item.png"
     }
   ],

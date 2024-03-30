@@ -1,11 +1,8 @@
 // import './GalleryItem.scss';
-import { IGood } from '../../../../redux/Good/types';
 import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Swiper from 'swiper';
-import { IWork } from '../../../../redux/Work/types';
-import ItemCard from '../../../ItemCard';
 import Emploeeitem from '..';
 type IEmploee = {
   url: string,
@@ -17,7 +14,7 @@ type IEmploee = {
 const SliderEmploee = ({ items }: any) => {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
     navigation: {

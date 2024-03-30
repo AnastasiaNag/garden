@@ -55,18 +55,18 @@ export const getWork = createAsyncThunk('work/getWork', async (itemId: number | 
 });
 
 
-export const deleteWork = createAsyncThunk('post/delete', async (itemId: number | string): Promise<string | number> => {
+export const deleteWork = createAsyncThunk('work/delete', async (itemId: number | string): Promise<string | number> => {
     await axios.delete(`http://localhost:3001/works/${itemId}`);
 
     return itemId;
 });
 
-export const add = createAsyncThunk('post/post', async (payload: PCreateWork): Promise<IWork> => {
+export const add = createAsyncThunk('work/post', async (payload: PCreateWork): Promise<IWork> => {
     const item = (await axios.post('http://localhost:3001/works', payload)).data;
     return item;
 });
 
-export const editWork = createAsyncThunk('post/saveChanges', async (data: { formValues: any; itemId: string | number }) => {
+export const editWork = createAsyncThunk('work/saveChanges', async (data: { formValues: any; itemId: string | number }) => {
     const { formValues, itemId } = data;
     await axios.put(`http://localhost:3001/works/${itemId}`, formValues);
     const updatedWork = (await axios.get(`http://localhost:3001/works/${formValues.id}`)).data;
