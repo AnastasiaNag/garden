@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
 import { getWork } from '../../redux/Work';
 import { useParams } from 'react-router-dom';
+import Feedback from '../../components/Feedback'
 import './WorkItem.scss';
 
 const WorkItem = () => {
@@ -36,6 +37,7 @@ const WorkItem = () => {
         <div className="work-item__text card">
           <img className="work-item__img" src={work?.img} alt="" />
           {work?.text}
+          <Feedback />
           </div>
       </div>
     </div>
