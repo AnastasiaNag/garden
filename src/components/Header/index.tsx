@@ -1,3 +1,4 @@
+import { height } from '@mui/system';
 import './Header.scss';
 import { scroller } from 'react-scroll';
 
@@ -6,7 +7,7 @@ const Header = () => {
     <div className="header">
         <div className="logo">
             <div className="logo__img">
-                <img src="img/plant1.png" alt="logo" />
+                <img src="img/logo (1).png" alt="logo" />
             </div>
             <div className="logo__name">Planto.</div>
         </div>
