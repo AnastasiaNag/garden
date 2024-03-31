@@ -1,14 +1,15 @@
 import './ItemCard.scss';
 import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
-import e from 'express';
 import { useState } from 'react';
+
+
 const ItemCard = ({ item, handleItemClick, isGood }: any) => {
   const [isAdded, setIsAdded] = useState(false);
 
-  const handleClick = () => {
-    // e.preventDefault();
-    setIsAdded(true);
+  const handleClick = (e: any) => {
+    e.stopPropagation();
+    setIsAdded(!isAdded);
   };
 
   return (

@@ -1,10 +1,12 @@
+@import '../../index.scss';
 .header{
     position: fixed;
     width: 100%;
     z-index: 2;
     display: flex;
-    background-color: #FFFFFF0D;
-    height: 45px;
+    background-color: $card-color;
+	backdrop-filter: blur(5px);
+    height: 50px;
     justify-content: space-between;
 }
 .logo{
@@ -25,33 +27,32 @@
     justify-content: center;
     gap: 20px;
     width: 100%;
-    
-    
+    color: white;
     &__home{
         cursor: pointer;
         font-size: 20px;
-        color: rgb(150, 150, 150);
+        color: white;
         background-color: transparent;
         font-size: 15px;
     }
     &__plantstype{
         cursor: pointer;
         font-size: 20px;
-        color: rgb(150, 150, 150);
+        color: white;
         background-color: transparent;
         font-size: 15px;
     }
     &__more{
         cursor: pointer;
         font-size: 20px;
-        color: rgb(150, 150, 150);
+        color: white;
         background-color: transparent;
         font-size: 15px;
     }
     &__contact{
-        color: rgb(150, 150, 150);
         font-size: 20px;
         cursor: pointer;
+        color: white;
         background-color: transparent;
         font-size: 15px;
     }

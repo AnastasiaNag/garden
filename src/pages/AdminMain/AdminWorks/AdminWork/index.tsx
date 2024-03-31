@@ -26,8 +26,12 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
   };
 
   const saveChanges = async () => {
-    saveItem(formValues, item.id);
-    setIsEdit(false);
+    if (!formValues.title || !formValues.text || !formValues.img ) {
+      alert('Пожалуйста, заполните все поля');
+    } else{
+      saveItem(formValues, item.id);
+      setIsEdit(false);
+    }
   };
 
   const cancelChanges = () => {
@@ -53,6 +57,7 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
         <>
           <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} />
           <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} />
+          <input name="text" onChange={onChange} value={formValues?.img} />
           <button className="admin__utils__btn" onClick={saveChanges}>
             Сохранить
           </button>

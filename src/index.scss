@@ -53,6 +53,7 @@ table {
   body {
 	background-color: $main-color;
 	color: $font-color;
+	scroll-behavior: smooth;
   }
   a {
 	text-decoration: none;
@@ -130,4 +131,33 @@ table {
 		border-right: 3px solid $card-color;
 		border-top-left-radius: 40px;
 		border-bottom-right-radius: 40px;
+}
+
+.btn{
+	display: flex;
+	justify-content: space-between;
+	width: 120px;
+	height: 45px;
+	border: 1px solid white;
+	background-color: transparent;
+	color: white;
+	padding: 10px;
+	border-radius: 30px;
+	transition: all ease 0.3s;
+	font-weight: 500;
+	cursor: pointer;
+	
+	&:hover {
+		color: $main-color;
+		background-color: white;
+		box-shadow: 0px 0px 20px 1px #ffbb7616;
+	  }
+	&__all{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 140px;
+		height: 60px;
+		border-radius: 5px;
+	}
 }

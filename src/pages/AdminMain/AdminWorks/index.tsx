@@ -34,7 +34,7 @@ const AdminWorks = () => {
   };
 
   const onSave = async (formValues: any, itemId: number | string) => {
-    dispatch(editWork({ formValues, itemId }));
+      dispatch(editWork({ formValues, itemId }));
   };
 
   const onChange = (event: any) => {
@@ -49,7 +49,7 @@ const AdminWorks = () => {
       text: formValues.text,
       img: formValues.img,
     };
-    if (!payload.title || !payload.text ) {
+    if (!payload.title || !payload.text || !payload.img ) {
       alert('Пожалуйста, заполните все поля');
       return;
     }
