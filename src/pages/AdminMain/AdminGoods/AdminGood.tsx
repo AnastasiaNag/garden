@@ -25,8 +25,12 @@ const AdminGood = ({ item, onDelete, saveItem }: Props) => {
     setFormValues({ ...formValues, [key]: value });
   };
   const saveChanges = async () => {
-    saveItem(formValues, item.id);
-    setIsEdit(false);
+    if (!formValues.title || !formValues.text || !formValues.img || !formValues.price || !formValues.category) {
+      alert('Пожалуйста, заполните все поля');
+    } else {
+      saveItem(formValues, item.id);
+      setIsEdit(false);
+    }
   };
   const cancelChanges = () => {
     setFormValues(item);
@@ -38,8 +42,10 @@ const AdminGood = ({ item, onDelete, saveItem }: Props) => {
       {!isEdit ? (
         <>
           <div className="h6">{item.title}</div>
+          <img alt="" style={{ display: 'flex', height: 'auto', width: '150px' }} src={item.img} />
           <div>{item.text}</div>
           <div>{item.price}</div>
+          <div>{item.category}</div>
           <button className="admin__utils__btn" onClick={setEditMode}>
             редактировать
           </button>
@@ -49,9 +55,11 @@ const AdminGood = ({ item, onDelete, saveItem }: Props) => {
         </>
       ) : (
         <>
-          <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} />
-          <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} />
-          <input name="price" type="text" onChange={onChange} value={formValues?.price} />
+          <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} placeholder="Название"/>
+          <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} placeholder="Описание" />
+          <input name="img" onChange={onChange} value={formValues?.img} placeholder="Картинка"/>
+          <input name="price" type="text" onChange={onChange} value={formValues?.price} placeholder="Цена"/>
+          <input name="category" type="text" onChange={onChange} value={formValues?.category} placeholder="Категория" />
           <button className="admin__utils__btn" onClick={saveChanges}>
             Сохранить
           </button>

@@ -110,7 +110,9 @@ table {
   .section{
 	display: flex;
 	padding: 20px;
+	max-width: 1400px;
 	& &__breadcrumb{
+		padding-top: 30px;
 		align-self: flex-start;
 		color: white;
 		&__last{

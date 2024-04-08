@@ -10,7 +10,7 @@ import '../Admin.scss';
 
 const initialState = { title: '', text: '', img: '' };
 
-const AdminWorks = () => {
+const AdminArticles = () => {
   const [open, setOpen] = useState<boolean>(false);
   const { works } = useSelector((state: RootState) => state.work);
   const [formValues, setFormValues] = useState(initialState);
@@ -102,4 +102,4 @@ const AdminWorks = () => {
   );
 };
 
-export default AdminWorks;
+export default AdminArticles;

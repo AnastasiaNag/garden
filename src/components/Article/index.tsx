@@ -1,73 +1,48 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { getArticles } from '../../redux/Article';
+import { RootState, AppDispatch } from '../../redux/store';
 import './Article.scss';
-import ArticleItem from './ArticleItem';
-import SliderArticle from './ArticleItem/SliderArticle';
+import { IArticle } from '../../redux/Article/types';
 
 const Article = () => {
-  const data = [
-    {
-      id: '329735982723759',
-
-      url: 'https://www.google.ru/',
-      imgUrl: 'https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam',
-    },
-    {
-      id: '2370272087502',
-
-      url: 'https://www.google.ru/',
-      imgUrl: 'https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam',
-    },
-    {
-      id: '723057238723',
-
-      url: 'https://www.google.ru/',
-      imgUrl: 'https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam',
-    },
-    {
-      id: '9823752735',
-
-      url: 'https://www.google.ru/',
-      imgUrl: 'https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam',
-    },
-    {
-      id: '9923582392',
-
-      url: 'https://www.google.ru/',
-      imgUrl: 'https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam',
-    },
-  ];
+  const { articles } = useSelector((state: RootState) => state.article);
+  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    const getArticle = async () => {
+      dispatch(getArticles());
+    };
+    getArticle();
+  }, [dispatch]);
+  const handleClick = (page: string) => {
+    window.open(page, '_self');
+  };
+  const handleArticleClick = (id: string | number) => {
+    navigate('articles/' + id);
+  };
   return (
-    <section className="article">
-      <h2 className="article__title">Cтатьи</h2>
+    <section className="article__section section">
+      <h2 className="article__title title h2">Cтатьи</h2>
+      <div className="article__cards-field"> 
       <div className="article__cards">
-        {/* <ArticleItem
-          url="https://www.google.ru/"
-          imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
-        />
-        <ArticleItem
-          url="https://www.google.ru/"
-          imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
-        />
-        <ArticleItem
-          url="https://www.google.ru/"
-          imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
-        />
-        <ArticleItem
-          url="https://www.google.ru/"
-          imgUrl="https://img.razrisyika.ru/kart/64/252759-gornyy-peyzazh-5.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis eveniet itaque sapiente nisi numquam saepe quidem perferendis deserunt? Distinctio beatae nisi quas adipisci neque labore qui iusto molestias nam"
-        /> */}
+        {articles.map((article: IArticle, index: number) => {
+          if (index < 3) {
+            return (
+              <div className="article__card card" style={{ backgroundImage: `url(${article.img})` }}onClick={() => handleArticleClick(article.id)}>
+                <div className="article__card__title h3">{article.title}</div>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
-      <SliderArticle items={data} />
+      <div className="article__further h6" onClick={() => handleClick('articles')}>См.далее</div>
+      </div>
     </section>
   );
 };
+
 export default Article;

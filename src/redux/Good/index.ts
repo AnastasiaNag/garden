@@ -12,6 +12,7 @@ const initialState: CounterState = {
         text: '',
         img: '',
         price: '',
+        category: ''
     }
 };
 
@@ -66,7 +67,7 @@ export const addGood = createAsyncThunk('good/add', async (payload: Partial <IGo
 
 export const editGood = createAsyncThunk('good/edit', async (data: { formValues: any; itemId: string | number }) => {
     const { formValues, itemId } = data;
-    await axios.put(`http://localhost:3001/works/${itemId}`, formValues);
+    await axios.put(`http://localhost:3001/goods/${itemId}`, formValues);
     const updatedGood = (await axios.get(`http://localhost:3001/goods/${formValues.id}`)).data;
     return {updatedGood};
 });

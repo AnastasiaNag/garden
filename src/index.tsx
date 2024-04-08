@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
 import Goods from './pages/Goods';
 import Works from './pages/Works';
+import Articles from './pages/Articles';
 import WorkItem from './pages/WorkItem';
+import ArticleItem from './pages/ArticleItem';
 import Admin from './pages/AdminMain/Admin';
 import AdminWorks from './pages/AdminMain/AdminWorks';
 import AdminGoods from './pages/AdminMain/AdminGoods';
+// import AdminArticles from './pages/AdminMain/AdminArticles';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
@@ -43,6 +46,14 @@ const routes = createBrowserRouter([
         path: '/works/:id',
         element: <WorkItem />,
       },
+      {
+        path: '/articles',
+        element: <Articles />,
+      },
+      {
+        path: '/articles/:id',
+        element: <ArticleItem/>,
+      }
     ],
   },
   {
@@ -61,6 +72,10 @@ const routes = createBrowserRouter([
     path: '/admin/goods',
     element: isAuthenticated ? <AdminGoods /> : <Navigate to="/admin" replace />,
   },
+  // {
+  //   path: '/admin/articles',
+  //   element: isAuthenticated ? <AdminArticles /> : <Navigate to="/admin" replace />,
+  // },
 ]);
 
 root.render(

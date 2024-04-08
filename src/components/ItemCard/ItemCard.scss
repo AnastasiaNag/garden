@@ -34,6 +34,7 @@
         padding: 0 10px;
         height: 80px;
         justify-content: space-between;
+        width: 180px;
     }
     &__text{
         display: -webkit-box;
@@ -48,6 +49,10 @@
         border: 1px solid $font-color;
         border-radius: 30px;
         gap: 5px;
-        padding: 3px;
+        padding: 5px;
+        &__text{
+        display: flex;
+        align-items: center;
+        }
     }
 }
