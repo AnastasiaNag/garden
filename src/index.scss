@@ -108,6 +108,7 @@ table {
 		}
   }
   .section{
+	
 	display: flex;
 	padding: 20px;
 	& &__breadcrumb{
@@ -146,6 +147,7 @@ table {
 	transition: all ease 0.3s;
 	font-weight: 500;
 	cursor: pointer;
+	
 	
 	&:hover {
 		color: $main-color;

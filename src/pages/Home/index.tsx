@@ -4,13 +4,16 @@ import Main from '../../components/Main';
 import './Home.scss';
 import Article from '../../components/Article';
 import { useRef } from 'react';
+import { Element } from 'react-scroll';
 
 const Home = () => {
     const galleryRef = useRef<HTMLDivElement | null>(null);
     return (
         <div className="main">
             <div>
-            <Main ancor={galleryRef} />
+                <Element name="Main">
+                    <Main ancor={galleryRef} />
+                </Element>
             </div>
             <div ref={galleryRef}>
                 <Gallery />
@@ -19,7 +22,9 @@ const Home = () => {
                 <Employee />
             </div>
             <div>
-                <Article />
+                <Element name="Footer">
+                    <Article />
+                </Element>
             </div>
         </div>
     );
