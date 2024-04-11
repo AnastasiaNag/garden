@@ -165,6 +165,44 @@
       "img": "/img/article.jpg"
     }
   ],
+  "employees": [
+    {
+      "id": "3297359827momo23759",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    },
+    {
+      "id": "3297o3759",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    },
+    {
+      "id": "329o0e759",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    },
+    {
+      "id": "323759",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    },
+    {
+      "id": "329723759",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    },
+    {
+      "id": "329735frf59",
+      "imgUrl": "https://naturavit.ru/image/cache/catalog/images/romaska1-800x600.jpg",
+      "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
+      "name": "Bum Bum"
+    }
+  ],
   "admin": [
     {
       "login": "admin",

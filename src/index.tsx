@@ -7,7 +7,8 @@ import Articles from './pages/Articles';
 import WorkItem from './pages/WorkItem';
 import ArticleItem from './pages/ArticleItem';
 import Admin from './pages/AdminMain/Admin';
-import AdminItems from './pages/AdminMain/AdminWorks';
+import AdminWorks from './pages/AdminMain/AdminWorks';
+import AdminArticles from './pages/AdminMain/AdminArticles';
 import AdminGoods from './pages/AdminMain/AdminGoods';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { store } from './redux/store';
@@ -65,7 +66,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/admin/works',
-    element: isAuthenticated ? <AdminItems isArticle={false} /> : <Navigate to="/admin" replace />,
+    element: isAuthenticated ? <AdminWorks/> : <Navigate to="/admin" replace />,
   },
   {
     path: '/admin/goods',
@@ -73,7 +74,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/admin/articles',
-    element: isAuthenticated ?<AdminItems isArticle={true} /> : <Navigate to="/admin" replace />,
+    element: isAuthenticated ?<AdminArticles /> : <Navigate to="/admin" replace />,
   },
 ]);
 

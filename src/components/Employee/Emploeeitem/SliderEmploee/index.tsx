@@ -3,7 +3,6 @@ import { Navigation, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Swiper from 'swiper';
-import Emploeeitem from '..';
 type IEmploee = {
   url: string,
   imgUrl: string,
@@ -32,7 +31,7 @@ const SliderEmploee = ({ items }: any) => {
             if (index <= items.length - 1) {
               return (
                 <div className="swiper-slide">
-                  <Emploeeitem url={item.url} imgUrl={item.imgUrl} text={item.text} name={item.name} />
+                  {/* <Emploeeitem url={item.url} imgUrl={item.imgUrl} text={item.text} name={item.name} /> */}
                 </div>
               );
             }
