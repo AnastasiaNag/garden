@@ -35,7 +35,7 @@ const Articles = () => {
       <div className="article__cards">
         {articles.map((article: IArticle) => {
             return (
-              <div className="article__card card" style={{ backgroundImage: `url(${article.img})` }}onClick={() => handleItemClick(article.id)}>
+              <div className="article__card article__card__page" style={{ backgroundImage: `url(${article.img})` }}onClick={() => handleItemClick(article.id)}>
                 <div className="article__card__title h3">{article.title}</div>
               </div>
             );

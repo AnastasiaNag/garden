@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { add, deleteWork, editWork, getWorks } from '../../../redux/Work';
+import { addArticle, deleteArticle, editArticle, getArticles } from '../../../redux/Article';
 import { AppDispatch, RootState } from '../../../redux/store';
-import AdminWork from './AdminWork';
+import AdminItem from './AdminWork';
 import { Modal } from '@mui/material';
 import { PCreateWork } from '../../../redux/Work/types';
 import { Breadcrumbs, Typography, Link } from '@mui/material';
@@ -10,9 +11,10 @@ import '../Admin.scss';
 
 const initialState = { title: '', text: '', img: '' };
 
-const AdminWorks = () => {
+const AdminItems = ({isArticle} : any) => {
   const [open, setOpen] = useState<boolean>(false);
   const { works } = useSelector((state: RootState) => state.work);
+  const { articles } = useSelector((state: RootState) => state.article);
   const [formValues, setFormValues] = useState(initialState);
   const [value, setValue] = useState('');
   const dispatch = useDispatch<AppDispatch>();
@@ -21,10 +23,10 @@ const AdminWorks = () => {
   const handleClose = () => setOpen(false);
 
   useEffect(() => {
-    const getMultWork = async () => {
+    const getMultItems = async () => {
       dispatch(getWorks());
     };
-    getMultWork();
+    getMultItems();
   }, [dispatch]);
 
   const filteredItems = works.filter((work) => work.title.toLowerCase().includes(value.toLowerCase()));
@@ -67,7 +69,7 @@ const AdminWorks = () => {
               Выбор категории
             </Link>
             <Typography className="section__breadcrumb__current" color="text.primary">
-              Услуги
+              {isArticle? 'Статьи' : 'Услуги'}
             </Typography>
           </Breadcrumbs>
         </div>
@@ -78,7 +80,7 @@ const AdminWorks = () => {
           </button>
         </div>
         {filteredItems.map((item) => {
-          return <AdminWork item={item} onDelete={deleteItem} saveItem={onSave} />;
+          return <AdminItem item={item} onDelete={deleteItem} saveItem={onSave} />;
         })}
       </div>
       <Modal className="admin__modal" open={open} onClose={handleClose}>
@@ -102,4 +104,4 @@ const AdminWorks = () => {
   );
 };
 
-export default AdminWorks;
+export default AdminItems;

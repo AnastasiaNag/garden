@@ -28,9 +28,21 @@
         color: white;
         width: 280px;
         height: 230px;
-        background-size: contain;
+        background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
+        border-radius: 30px;
+	    box-shadow: 0px 9px 18.399999618530273px 0px #00000040;
+	    transition: all ease 0.3s;
         cursor: pointer;
+        &:hover{
+		    box-shadow: 0px 0px 20px 1px #ffbb7616;
+            transform: scale(1.05);
+        }
+    &__page{
+        max-width: 500px;
+        width: 100%;
+    }
     }
     &__further{
         align-self: flex-end;

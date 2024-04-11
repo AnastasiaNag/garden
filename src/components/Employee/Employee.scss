@@ -1,27 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none
+.employee{
+    &__section{
+        flex-direction: column;
+        gap: 90px;
+        align-items: center;
+    }
+    
+    &__cards {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        width: 100%;
+    }
 }
 
-.employee {
-    max-width: 1280;
-    padding: 20px;
-}
-
-.employee__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    font-size: 50px;
-}
-
-.employee__cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .employee__card {
     width: 80%;

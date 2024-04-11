@@ -7,9 +7,8 @@ import Articles from './pages/Articles';
 import WorkItem from './pages/WorkItem';
 import ArticleItem from './pages/ArticleItem';
 import Admin from './pages/AdminMain/Admin';
-import AdminWorks from './pages/AdminMain/AdminWorks';
+import AdminItems from './pages/AdminMain/AdminWorks';
 import AdminGoods from './pages/AdminMain/AdminGoods';
-// import AdminArticles from './pages/AdminMain/AdminArticles';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
@@ -66,16 +65,16 @@ const routes = createBrowserRouter([
   },
   {
     path: '/admin/works',
-    element: isAuthenticated ? <AdminWorks /> : <Navigate to="/admin" replace />,
+    element: isAuthenticated ? <AdminItems isArticle={false} /> : <Navigate to="/admin" replace />,
   },
   {
     path: '/admin/goods',
     element: isAuthenticated ? <AdminGoods /> : <Navigate to="/admin" replace />,
   },
-  // {
-  //   path: '/admin/articles',
-  //   element: isAuthenticated ? <AdminArticles /> : <Navigate to="/admin" replace />,
-  // },
+  {
+    path: '/admin/articles',
+    element: isAuthenticated ?<AdminItems isArticle={true} /> : <Navigate to="/admin" replace />,
+  },
 ]);
 
 root.render(

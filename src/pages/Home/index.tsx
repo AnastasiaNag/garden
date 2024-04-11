@@ -4,13 +4,14 @@ import Main from '../../components/Main';
 import './Home.scss';
 import Article from '../../components/Article';
 import { useRef } from 'react';
+import Footer from '../../components/Footer';
 
 const Home = () => {
     const galleryRef = useRef<HTMLDivElement | null>(null);
     return (
         <div className="main">
             <div>
-            <Main ancor={galleryRef} />
+            <Main anchor={galleryRef} />
             </div>
             <div ref={galleryRef}>
                 <Gallery />

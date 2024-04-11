@@ -34,8 +34,8 @@ const ArticleItem = () => {
       <div className="article-item__content">
         <div className="article-item__title title h2">{article?.title}</div>
         <div className="article-item__description card">
-        <div className="article-item__text">
         <img className="article-item__img" src={article?.img} alt="" />
+        <div className="article-item__text">
           {article?.text}
           </div>
         </div>
