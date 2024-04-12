@@ -1,17 +1,18 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { CounterState, IArticle } from './types';
 import axios from 'axios';
+import { BASE_URL } from '../../utils';
 
 const initialState: CounterState = {
-    value: 0,
-    articles: [],
-    id: [],
-    article: {
-        id: '',
-        title: '',
-        text: '',
-        img: '',
-    }
+  value: 0,
+  articles: [],
+  id: [],
+  article: {
+    id: '',
+    title: '',
+    text: '',
+    img: '',
+  },
 };
 
 export const counterSlice = createSlice({
@@ -39,32 +40,30 @@ export const counterSlice = createSlice({
   },
 });
 
-
-
 export default counterSlice.reducer;
 
 export const getArticles = createAsyncThunk('articles/get', async (): Promise<IArticle[]> => {
-    const articles = (await axios.get('http://localhost:3001/articles')).data;
-    return articles;
+  const articles = (await axios.get(BASE_URL + '/articles')).data;
+  return articles;
 });
 export const getArticle = createAsyncThunk('article/getArticle', async (itemId: string | number | null): Promise<IArticle> => {
-    const article = (await axios.get(`http://localhost:3001/articles/${itemId}`)).data;
-    return article;
+  const article = (await axios.get(BASE_URL + `/articles/${itemId}`)).data;
+  return article;
 });
 
 export const deleteArticle = createAsyncThunk('article/delete', async (itemId: string): Promise<string> => {
-    await axios.delete(`http://localhost:3001/articles/${itemId}`);
-    return itemId;
+  await axios.delete(BASE_URL + `/articles/${itemId}`);
+  return itemId;
 });
 
-export const addArticle = createAsyncThunk('article/add', async (payload: Partial <IArticle>): Promise<IArticle> => {
-    const newGood = (await axios.post('http://localhost:3001/articles', payload)).data;
-    return newGood;
+export const addArticle = createAsyncThunk('article/add', async (payload: Partial<IArticle>): Promise<IArticle> => {
+  const newGood = (await axios.post(BASE_URL + '/articles', payload)).data;
+  return newGood;
 });
 
 export const editArticle = createAsyncThunk('article/edit', async (data: { formValues: any; itemId: string | number }) => {
     const { formValues, itemId } = data;
-    await axios.put(`http://localhost:3001/articles/${itemId}`, formValues);
-    const updatedArticle = (await axios.get(`http://localhost:3001/articles/${formValues.id}`)).data;
+    await axios.put(BASE_URL + `/articles/${itemId}`, formValues);
+    const updatedArticle = (await axios.get(BASE_URL + `/articles/${formValues.id}`)).data;
     return {updatedArticle};
 });

@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { BASE_URL } from '../../utils';
 
 export interface CounterState {
     admin: IAdmin;
@@ -34,6 +35,6 @@ export const counterSlice = createSlice({
 export default counterSlice.reducer;
 
 export const getAdmin = createAsyncThunk('admin/get', async (): Promise<IAdmin> => {
-    const admin = (await axios.get('http://localhost:3001/admin')).data[0];
+    const admin = (await axios.get(BASE_URL + '/admin')).data[0];
     return admin;
 });

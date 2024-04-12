@@ -2,14 +2,15 @@ import axios from 'axios';
 import GoodMax from '../GoodMax';
 import './Main.scss';
 import { useState, useEffect } from 'react';
+import { BASE_URL } from '../../utils';
 const Main = ({anchor}: any) => {
     const [good1, setGood1] = useState<any>(null);
     const [good2, setGood2] = useState<any>(null);
 
     useEffect(() => {
       const fetchGood = async () => {
-        const response1 = await axios.get(`http://localhost:3001/goods/c2320d`);
-        const response2 = await axios.get(`http://localhost:3001/goods/bcarg5b`);
+        const response1 = await axios.get(BASE_URL + `/goods/c2320d`);
+        const response2 = await axios.get(BASE_URL + `/goods/bcarg5b`);
           setGood1(response1.data);
           setGood2(response2.data);
         }   
