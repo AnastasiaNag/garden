@@ -3,13 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Swiper from 'swiper';
 import './GalleryEmployee.scss';
-type IEmploee = {
-  url: string,
-  imgUrl: string,
-  text: string,
-  id: string,
-  name: string,
-};
+import { IEmployee } from '../../../redux/Employees/types';
 const GalleryEmploee = ({ items }: any) => {
   const swiper = new Swiper('.swiperem', {
   slidesPerView: 3,
@@ -28,13 +22,13 @@ const GalleryEmploee = ({ items }: any) => {
   return (
     <div className="swiperem swiper" style={{ padding: '0 40px', backgroundColor: '#1B2316' }}>
       <div className="swiper-wrapper">
-        {items.map((item: IEmploee, index: number) => {
+        {items.map((item: IEmployee, index: number) => {
           if (index <= items.length - 1) {
             return (
               <div key={index} className="swiper-slide employee__slide">
-                <div className="employee__img"><img className="employee__img" src={item?.imgUrl} alt="" /></div>
+                <div className="employee__img"><img className="employee__img" src={item?.img} alt="" /></div>
                 <div className="employee__description">
-                <div className="employee__title h6">{item?.name}</div>
+                <div className="employee__title h6">{item?.title}</div>
                 <div className="employee__text h7">{item?.text}</div>
                 </div>
               </div>

@@ -17,6 +17,7 @@ import './index.scss';
 import MainPages from './pages/MainPages';
 import Login from './pages/AdminMain/Login';
 import GoodItem from './pages/GoodItem';
+import AdminEmployees from './pages/AdminMain/AdminEmployees';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
@@ -76,6 +77,10 @@ const routes = createBrowserRouter([
     path: '/admin/articles',
     element: isAuthenticated ?<AdminArticles /> : <Navigate to="/admin" replace />,
   },
+  {
+    path: '/admin/employees',
+    element: isAuthenticated ?<AdminEmployees /> : <Navigate to="/admin" replace />,
+  }
 ]);
 
 root.render(

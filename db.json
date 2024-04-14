@@ -168,39 +168,39 @@
   "employees": [
     {
       "id": "3297359827momo23759",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     },
     {
       "id": "3297o3759",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     },
     {
       "id": "329o0e759",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     },
     {
       "id": "323759",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     },
     {
       "id": "329723759",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     },
     {
       "id": "329735frf59",
-      "imgUrl": "/img/article.jpg",
+      "img": "/img/article.jpg",
       "text": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ab!",
-      "name": "Bum Bum"
+      "title": "Bum Bum"
     }
   ],
   "admin": [

@@ -1,9 +1,10 @@
 import { IArticle } from '../../../../redux/Article/types';
+import { IEmployee } from '../../../../redux/Employees/types';
 import { IWork } from '../../../../redux/Work/types';
 import { useState } from 'react';
 
 interface Props {
-  item: IWork | IArticle
+  item: IWork | IArticle | IEmployee
   onDelete: (postId: number | string) => void;
   saveItem: (g: any, postId: number | string) => void;
 }
