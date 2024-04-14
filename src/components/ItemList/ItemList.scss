@@ -4,9 +4,10 @@
     gap: 20px;
     &__cards{
         margin-top: 40px;
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(4, 250px);
-        gap: 30px;
+        gap: 40px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }

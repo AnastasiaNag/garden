@@ -3,6 +3,7 @@ import good from './Good';
 import work from './Work';
 import admin from './Admin';
 import article from './Article';
+import employee from './Employees';
 
 export const store = configureStore({
     reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
         work,
         article,
         admin,
+        employee
     },
 });
 

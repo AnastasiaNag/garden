@@ -11,6 +11,7 @@
         font-weight: lighter;
         text-decoration: none;
         color: $font-color;
+        text-align: center;
         &__opening{
             display: flex;
             flex-direction: column;
@@ -48,14 +49,21 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 880px) {
+    .footer{
+        &__horiz{
+            gap: 40px;
+        }
+    }
+    
+}
+@media (max-width: 700px) {
     .footer{
         &__logo{
             width: 200px;
         }
         &__horiz{
             flex-direction: column;
-            gap: 40px;
         }
         &__info{
             gap: 5px;

@@ -4,49 +4,10 @@
         gap: 90px;
         align-items: center;
     }
-    
     &__cards {
         display: flex;
         align-items: center;
         max-width: 1000px;
         width: 100%;
-    }
-}
-
-
-.employee__card {
-    width: 80%;
-    border: 1px solid rgba(255, 255, 255, 0.0509803922);
-    border-radius: 25px;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.0509803922);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 9px 18.3999996185px 0px rgba(0, 0, 0, 0.2509803922);
-    transition: all ease 0.3s;
-
-    &:hover {
-        box-shadow: 0px 0px 20px 1px rgba(255, 187, 118, 0.0862745098);
-    }
-
-
-    &_item {
-        max-width: 200px;
-        width: 200px;
-
-        &:visited {
-            color: white;
-        }
-    }
-
-    &_photo {
-        &>img {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-        }
-    }
-
-    &_profile {
-        display: flex;
     }
 }
