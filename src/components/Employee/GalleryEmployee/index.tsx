@@ -16,6 +16,7 @@ const GalleryEmploee = ({ items }: any) => {
       type: 'bullets',
       clickable: true,
     },
+    slidesPerGroupSkip: 3,
     modules: [Pagination],
   });
 
