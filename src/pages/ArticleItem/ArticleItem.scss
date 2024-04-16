@@ -1,0 +1,35 @@
+@import '../../index.scss';
+
+.article-item{
+    &__section{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    &__description{
+        display: flex;
+        max-width: 1000px;
+        width: 100%;
+        padding: 30px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    &__text{
+        display: flex;
+        text-align: justify;
+        line-height: 30px;
+        gap: 30px;
+        padding: 20px;
+    }
+    &__img{
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+}

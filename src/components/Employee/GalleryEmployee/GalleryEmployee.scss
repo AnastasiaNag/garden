@@ -1,0 +1,23 @@
+.swiper{
+    & &-pagination{
+        padding-top: 20px;
+        &-bullet{
+            background-color: white;
+        }
+    }
+}
+
+.employee{
+    &__slide{
+        max-width: 300px;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        gap: 20px;
+    }
+    &__img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+}

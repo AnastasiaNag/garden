@@ -21,9 +21,9 @@ export default function FormDialog() {
   return (
     <div className="Feedback">
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <button className="btn__all btn h6"  onClick={handleClickOpen}>
         Обратная связь
-      </Button>
+      </button>
       <Dialog
         open={open}
         onClose={handleClose}

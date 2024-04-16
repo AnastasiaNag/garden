@@ -1,0 +1,78 @@
+@import '../../index.scss';
+
+.footer {
+    &__section{
+        margin-top: 40px;
+        background-color: $card-color;
+        font-weight: 200;
+        justify-content: center;
+    }
+    &__text{
+        font-weight: lighter;
+        text-decoration: none;
+        color: $font-color;
+        text-align: center;
+        &__opening{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__logo{
+        width: 140px;
+        height: 100%;
+    }
+    &__horiz{
+        display: flex;
+        width: inherit;
+        height: auto;
+        align-items: center;
+        padding: 20px;
+        gap: 130px;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__logo{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__base{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 7px;
+    }
+}
+
+@media (max-width: 880px) {
+    .footer{
+        &__horiz{
+            gap: 40px;
+        }
+    }
+    
+}
+@media (max-width: 700px) {
+    .footer{
+        &__logo{
+            width: 200px;
+        }
+        &__horiz{
+            flex-direction: column;
+        }
+        &__info{
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            &__logo{
+                order: -1;
+            }
+        }
+    }
+    
+}

@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
 import Goods from './pages/Goods';
 import Works from './pages/Works';
+import Articles from './pages/Articles';
 import WorkItem from './pages/WorkItem';
+import ArticleItem from './pages/ArticleItem';
 import Admin from './pages/AdminMain/Admin';
 import AdminWorks from './pages/AdminMain/AdminWorks';
+import AdminArticles from './pages/AdminMain/AdminArticles';
 import AdminGoods from './pages/AdminMain/AdminGoods';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { store } from './redux/store';
@@ -14,6 +17,7 @@ import './index.scss';
 import MainPages from './pages/MainPages';
 import Login from './pages/AdminMain/Login';
 import GoodItem from './pages/GoodItem';
+import AdminEmployees from './pages/AdminMain/AdminEmployees';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
@@ -43,6 +47,14 @@ const routes = createBrowserRouter([
         path: '/works/:id',
         element: <WorkItem />,
       },
+      {
+        path: '/articles',
+        element: <Articles />,
+      },
+      {
+        path: '/articles/:id',
+        element: <ArticleItem/>,
+      }
     ],
   },
   {
@@ -55,12 +67,20 @@ const routes = createBrowserRouter([
   },
   {
     path: '/admin/works',
-    element: isAuthenticated ? <AdminWorks /> : <Navigate to="/admin" replace />,
+    element: isAuthenticated ? <AdminWorks/> : <Navigate to="/admin" replace />,
   },
   {
     path: '/admin/goods',
     element: isAuthenticated ? <AdminGoods /> : <Navigate to="/admin" replace />,
   },
+  {
+    path: '/admin/articles',
+    element: isAuthenticated ?<AdminArticles /> : <Navigate to="/admin" replace />,
+  },
+  {
+    path: '/admin/employees',
+    element: isAuthenticated ?<AdminEmployees /> : <Navigate to="/admin" replace />,
+  }
 ]);
 
 root.render(
