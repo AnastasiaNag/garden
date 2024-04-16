@@ -16,7 +16,6 @@
         flex-direction: column;
         gap: 20px;
         align-items: center;
-        height: inherit;
         }
         }
         
@@ -34,6 +33,7 @@
         padding: 0 10px;
         height: 80px;
         justify-content: space-between;
+        width: 180px;
     }
     &__text{
         display: -webkit-box;
@@ -48,6 +48,34 @@
         border: 1px solid $font-color;
         border-radius: 30px;
         gap: 5px;
-        padding: 3px;
+        padding: 5px;
+        &__text{
+        display: flex;
+        align-items: center;
+        }
     }
+}
+
+@media (max-width: 550px) {
+   .item{
+    &__img{
+        max-height: 130px;
+        height: 100%;
+    }
+    &__card{
+        max-width: 160px;
+        height: 190px;
+        &__content{
+            max-width: 160px;
+        height: 190px;
+        }
+    }
+    &__description{
+        max-width: 120px;
+        width: 100%;
+    }
+    &__title{
+        font-size: 15px;
+    }
+   }
 }

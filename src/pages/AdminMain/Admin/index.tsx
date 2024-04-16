@@ -15,6 +15,8 @@ const logout = () => {
     <div className="admin__panel section">
       <button className="admin__utils__btn admin__utils" onClick={()=>handleClick('works')}>Изменить услуги</button>
       <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('goods')}>Изменить товары</button>
+      <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('articles')}>Изменить статьи</button>
+      <button className="admin__utils__btn admin__utils"onClick={()=>handleClick('employees')}>Изменить сотрудников</button>
       <button onClick={logout} style={{backgroundColor: 'rgb(207, 72, 49)'}} className="admin__utils__btn admin__utils">Выйти</button>
     </div>
   );

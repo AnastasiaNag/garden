@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, deleteWork, editWork, getWorks } from '../../../redux/Work';
+import { addArticle, deleteArticle, editArticle, getArticles } from '../../../redux/Article';
 import { AppDispatch, RootState } from '../../../redux/store';
-import AdminItem from './AdminWork';
+import AdminItem from '../AdminWorks/AdminWork';
 import { Modal } from '@mui/material';
-import { PCreateWork } from '../../../redux/Work/types';
 import { Breadcrumbs, Typography, Link } from '@mui/material';
 import '../Admin.scss';
+import { PCreateArticle } from '../../../redux/Article/types';
 
 const initialState = { title: '', text: '', img: '' };
 
-const AdminWorks = () => {
+const AdminItems = ({isArticle} : any) => {
   const [open, setOpen] = useState<boolean>(false);
-  const { works } = useSelector((state: RootState) => state.work);
+  const { articles } = useSelector((state: RootState) => state.article);
   const [formValues, setFormValues] = useState(initialState);
   const [value, setValue] = useState('');
   const dispatch = useDispatch<AppDispatch>();
@@ -22,19 +22,19 @@ const AdminWorks = () => {
 
   useEffect(() => {
     const getMultItems = async () => {
-      dispatch(getWorks());
+      dispatch(getArticles());
     };
     getMultItems();
   }, [dispatch]);
 
-  const filteredItems = works.filter((work) => work.title.toLowerCase().includes(value.toLowerCase()));
+  const filteredItems = articles.filter((item) => item.title.toLowerCase().includes(value.toLowerCase()));
 
   const deleteItem = (itemId: any) => {
-    dispatch(deleteWork(itemId));
+    dispatch(deleteArticle(itemId));
   };
 
   const onSave = async (formValues: any, itemId: number | string) => {
-      dispatch(editWork({ formValues, itemId }));
+      dispatch(editArticle({ formValues, itemId }));
   };
 
   const onChange = (event: any) => {
@@ -44,7 +44,7 @@ const AdminWorks = () => {
   };
 
   const addItem = async () => {
-    const payload: PCreateWork = {
+    const payload: PCreateArticle = {
       title: formValues.title,
       text: formValues.text,
       img: formValues.img,
@@ -53,7 +53,7 @@ const AdminWorks = () => {
       alert('Пожалуйста, заполните все поля');
       return;
     }
-    dispatch(add(payload));
+    dispatch(addArticle(payload));
     handleClose();
     setFormValues(initialState);
   };
@@ -67,7 +67,7 @@ const AdminWorks = () => {
               Выбор категории
             </Link>
             <Typography className="section__breadcrumb__current" color="text.primary">
-              Услуги
+              Статьи
             </Typography>
           </Breadcrumbs>
         </div>
@@ -102,4 +102,4 @@ const AdminWorks = () => {
   );
 };
 
-export default AdminWorks;
+export default AdminItems;

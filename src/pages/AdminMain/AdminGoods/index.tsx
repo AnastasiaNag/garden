@@ -9,7 +9,7 @@ import { PCreateGood } from '../../../redux/Good/types';
 import { Breadcrumbs, Typography, Link } from '@mui/material';
 import '../Admin.scss';
 
-const initialState = { title: '', text: '', img: '', price: '' };
+const initialState = { title: '', text: '', img: '', price: '', category: '' };
 
 const AdminGoods = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -50,8 +50,9 @@ const AdminGoods = () => {
         text: formValues.text,
         img: formValues.img,
         price: formValues.price,
+        category: formValues.category,
     };
-    if (!payload.title || !payload.text || payload.price) {
+    if (!formValues.title || !formValues.text || !formValues.img || !formValues.price || !formValues.category) {
       alert('Пожалуйста, заполните все поля');
       return;
     }
@@ -85,17 +86,18 @@ const AdminGoods = () => {
       </div>
       <Modal className="admin__modal" open={open} onClose={handleClose}>
         <div className="admin__modal" onKeyDown={(event) => (event.key === 'Enter' ? addItem() : false)}>
-          <input className="admin__utils" value={formValues.title} autoFocus type="text" placeholder="Title" onChange={onChange} name="title" />
+          <input className="admin__utils" value={formValues.title} autoFocus type="text" placeholder="Название" onChange={onChange} name="title" />
           <textarea
             className="admin__utils admin__utils__text"
             value={formValues.text}
-            autoFocus
-            placeholder="Text"
+            placeholder="Описание"
             onChange={onChange}
             name="text"
             rows={20}
           />
-          <input className="admin__utils" value={formValues.price} autoFocus type="text" placeholder="Price" onChange={onChange} name="price" />
+          <input className="admin__utils" value={formValues.price} type="text" placeholder="Цена" onChange={onChange} name="price" />
+          <input className="admin__utils" value={formValues.category} type="text" placeholder="Категория" onChange={onChange} name="category" />
+          <button className="admin__utils admin__utils__btn">Загрузить фото</button>
           <button className="admin__utils__btn admin__utils" onClick={addItem}>
             Добавить
           </button>

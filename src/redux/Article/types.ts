@@ -1,23 +1,19 @@
-export interface IGood {
+export interface IArticle {
     id: string | number;
     title: string,
     text: string | number,
     img: string,
-    price: string | number,
-    category: string,
 }
 
 export interface CounterState {
     value: number;
-    goods: IGood[];
-    id: IGood[];
-    good: IGood;
+    articles: IArticle[];
+    id: IArticle[];
+    article: IArticle;
 }
 
-export interface PCreateGood {
+export interface PCreateArticle {
     title: string;
     text: string | number;
-    price: string | number;
     img: string,
-    category: string,
 }

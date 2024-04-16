@@ -20,7 +20,7 @@ const ItemCard = ({ item, handleItemClick, isGood }: any) => {
           <div className={`item__title ${isGood ? 'h6' : 'h5'}`}>{item.title}</div>
           {isGood ? (
             <div className="item__price h7 " onClick={handleClick}>
-              <div>{item?.price}</div>
+              <div className="item__price__text">{item?.price}</div>
               {isAdded ? <ShoppingCartRoundedIcon /> : <AddShoppingCartRoundedIcon />}
             </div>
           ) : (

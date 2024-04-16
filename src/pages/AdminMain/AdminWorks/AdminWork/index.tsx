@@ -1,13 +1,15 @@
+import { IArticle } from '../../../../redux/Article/types';
+import { IEmployee } from '../../../../redux/Employees/types';
 import { IWork } from '../../../../redux/Work/types';
 import { useState } from 'react';
 
 interface Props {
-  item: IWork;
+  item: IWork | IArticle | IEmployee
   onDelete: (postId: number | string) => void;
   saveItem: (g: any, postId: number | string) => void;
 }
 
-const AdminWork = ({ item, onDelete, saveItem }: Props) => {
+const AdminItem = ({ item, onDelete, saveItem }: Props) => {
   const [isEdit, setIsEdit] = useState<boolean>(false);
   const [formValues, setFormValues] = useState(item);
 
@@ -55,9 +57,9 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
         </>
       ) : (
         <>
-          <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} />
-          <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} />
-          <input name="text" onChange={onChange} value={formValues?.img} />
+          <input autoFocus name="title" type="text" onChange={onChange} value={formValues?.title} placeholder="Название"/>
+          <textarea name="text" onChange={onChange} value={formValues?.text} rows={20} placeholder="Описание"/>
+          <input name="img" onChange={onChange} value={formValues?.img} placeholder="Картинка"/>
           <button className="admin__utils__btn" onClick={saveChanges}>
             Сохранить
           </button>
@@ -70,4 +72,4 @@ const AdminWork = ({ item, onDelete, saveItem }: Props) => {
   );
 };
 
-export default AdminWork;
+export default AdminItem;
