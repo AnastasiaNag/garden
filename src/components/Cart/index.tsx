@@ -16,6 +16,7 @@ import axios from 'axios';
 
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
+  const [items, setItems] = useState<Item[]>([]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -25,13 +26,40 @@ export default function FormDialog() {
     setOpen(false);
   };
 
+  interface Item {
+    id: string;
+    category: string;
+    title: string;
+    text: string;
+    img: string;
+    price: number;
+  }
+
+  
+  
+
   useEffect(() => {
-      const [items, setItems] =  axios.get(`http://localhost:3001/goods`);
+    const fetchData = async () => {
+      const result = await axios.get(`http://localhost:3001/cartitems/`);
+      setItems(result.data);
       
-        
-      }, []);
+    };
+
+    fetchData();
+  }, [open]);
+
+  const handleDelete = async (itemId: string) => {
+    try {
+      await axios.delete(`http://localhost:3001/cartitems/${itemId}`);
+      setItems(items.filter((item) => item.id !== itemId));
+    } catch (error) {
+      console.error(error);
+    }
+  };
   
-  
+   
+ 
+
   return (
     <div className="Cart">
     <React.Fragment>
@@ -54,7 +82,14 @@ export default function FormDialog() {
         <DialogTitle>Корзина</DialogTitle>
         <DialogContent>
           <DialogContentText>
-          
+          <ul>
+              {items.map((item) => (
+                <li key={item.id}>
+                  {item.title} - {item.price}
+                  <Button onClick={() => handleDelete(item.id)}>Удалить</Button>
+                </li>
+              ))}
+            </ul>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -66,3 +101,4 @@ export default function FormDialog() {
     </div>
   );
 }
+

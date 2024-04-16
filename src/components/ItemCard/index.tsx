@@ -2,6 +2,8 @@ import './ItemCard.scss';
 import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { useState } from 'react';
+import axios from 'axios';
+
 
 
 const ItemCard = ({ item, handleItemClick, isGood }: any) => {
@@ -10,6 +12,17 @@ const ItemCard = ({ item, handleItemClick, isGood }: any) => {
   const handleClick = (e: any) => {
     e.stopPropagation();
     setIsAdded(!isAdded);
+    
+
+    const newItem = {
+      id: item.id,
+      category: item.category,
+      title: item.title,
+      text: item.text,
+      img: item.img,
+      price: item.price,
+    };
+    axios.post('http://localhost:3001/cartitems', newItem);
   };
 
   return (
