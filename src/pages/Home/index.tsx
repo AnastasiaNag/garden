@@ -10,19 +10,21 @@ const Home = () => {
     const galleryRef = useRef<HTMLDivElement | null>(null);
     return (
         <div className="main">
-            <div>
+            
             <Main anchor={galleryRef} />
-            </div>
+           
             <div ref={galleryRef}>
                 <Gallery />
             </div>
+
             <div>
                 <Employee />
             </div>
+            
             <div>
-                <Element name="Footer">
+                
                     <Article />
-                </Element>
+                
             </div>
         </div>
     );
