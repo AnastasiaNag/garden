@@ -89,6 +89,7 @@
       "img": "/img/item.png"
     }
   ],
+  "cartitems": [],
   "works": [
     {
       "id": "fwopp",
@@ -139,7 +140,8 @@
       "img": "/img/item.png"
     }
   ],
-  "articles":[
+
+  "articles": [
     {
       "id": "a8ajsiujt3",
       "title": "Уход за розами",
@@ -206,7 +208,8 @@
   "admin": [
     {
       "login": "admin",
-      "password": "admin"
+      "password": "admin",
+      "id": "6d82"
     }
   ]
 }

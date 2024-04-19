@@ -16,11 +16,15 @@ const Home = () => {
             <div ref={galleryRef}>
                 <Gallery />
             </div>
+
             <div>
                 <Employee />
             </div>
+            
             <div>
-                <Article />
+                
+                    <Article />
+                
             </div>
         </div>
     );

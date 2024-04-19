@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     height: 1300px;
-    width: auto;
     background-repeat: no-repeat;
     background-image: url('./img/main.jpg');
+    width: auto;
     background-size: cover;
+    margin: 0 auto;
     &__content{
         display: flex;
         height: 400px;
