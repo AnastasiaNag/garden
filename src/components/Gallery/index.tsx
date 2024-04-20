@@ -7,7 +7,7 @@ import GallerySection from './GallerySection';
 import { useNavigate } from 'react-router-dom';
 import './Gallery.scss'
 
-const Gallery = () => {
+const Gallery = ({ ref }: any) => {
   const { goods } = useSelector((state: RootState) => state.good);
   const { works } = useSelector((state: RootState) => state.work);
   const navigate = useNavigate();
@@ -33,13 +33,18 @@ const Gallery = () => {
     navigate('goods/' + id);
   };
   return (
-    <>
-      <div className="gallery__section section">
-        <div className="gallery__section__title title h2">Мы предлагаем</div>
-      <GallerySection type={'works'} title={'услуги'} items={works} handleClick={() => handleClick('works')} handleItemClick={handleWorksClick} isGood={false} />
+    <div ref={ref} className="gallery__section section">
+      <div className="gallery__section__title title h2">Мы предлагаем</div>
+      <GallerySection
+        type={'works'}
+        title={'услуги'}
+        items={works}
+        handleClick={() => handleClick('works')}
+        handleItemClick={handleWorksClick}
+        isGood={false}
+      />
       <GallerySection type={'goods'} title={'товары'} items={goods} handleClick={() => handleClick('goods')} handleItemClick={handleGoodsClick} isGood={true} />
-      </div>
-    </>
+    </div>
   );
 };
 

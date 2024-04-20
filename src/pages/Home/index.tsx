@@ -4,30 +4,20 @@ import Main from '../../components/Main';
 import './Home.scss';
 import Article from '../../components/Article';
 import { useRef } from 'react';
-import Footer from '../../components/Footer';
 
 const Home = () => {
-    const galleryRef = useRef<HTMLDivElement | null>(null);
-    return (
-        <div className="main">
-            <div>
-            <Main anchor={galleryRef} />
-            </div>
-            <div ref={galleryRef}>
-                <Gallery />
-            </div>
+  const galleryRef = useRef<HTMLDivElement | null>(null);
+  return (
+    <div className="main">
+      <Main anchor={galleryRef} />
 
-            <div>
-                <Employee />
-            </div>
-            
-            <div>
-                
-                    <Article />
-                
-            </div>
-        </div>
-    );
+      <Gallery ref={galleryRef} />
+
+      <Employee />
+
+      <Article />
+    </div>
+  );
 };
 
 export default Home;

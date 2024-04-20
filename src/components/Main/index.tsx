@@ -24,8 +24,8 @@ const Main = ({anchor}: any) => {
   };
 
   return (
-    <div className="mainpage section">
-      <div className="mainpage__content">
+    <div className="mainpage">
+      <div className="mainpage__content section">
         <div className="mainpage__content__description">
           <div className="mainpage__content__title h1">Lorem Lorem</div>
           <div className="mainpage__content__text h5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum nam nostrum id,</div>
