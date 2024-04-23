@@ -1,6 +1,9 @@
 @import '/src/styles/variables.scss';
 
 .gallery {
+    &__media{
+        display: none;
+    }
     &__carousel {
         display: flex;
         border: 1px solid $card-color;
@@ -51,8 +54,27 @@
     }
 }
 
-@media (max-width: 800px) {
-    .gallery__title{
-        display: none;
+@media (max-width: 700px) {
+    .gallery{
+        &__carousel{
+            display: none;
+        }
+        &__media{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            &__title{
+            cursor: pointer;
+            }
+            &__items{
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
     }

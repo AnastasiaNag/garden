@@ -1,26 +1,25 @@
 import './GalleryItem.scss';
 import { IGood } from '../../../../redux/Good/types';
-import { Navigation, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import {Swiper} from 'swiper';
 import { IWork } from '../../../../redux/Work/types';
 import ItemCard from '../../../ItemCard';
 const GalleryItem = ({ items, handleClick, handleItemClick, isGood }: any) => {
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
+  const swiper = new Swiper('.swipergal', {
     loop: false,
     slidesPerView: 3,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    modules: [Navigation, A11y],
+    modules: [Navigation],
   });
 
   return (
     <>
-      <div className="swiper" style={{ padding: '0 15px', backgroundColor: '#1B2316' }}>
+      <div className="swiper swipergal" style={{ padding: '0 15px', backgroundColor: '#1B2316' }}>
         <div className="swiper-wrapper">
           {items.map((item: IGood | IWork, index: number) => {
             if (index <= 4) {

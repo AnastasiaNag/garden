@@ -1,7 +1,7 @@
 .mainpage{
     display: flex;
     flex-direction: column;
-    height: 1300px;
+    max-height: 1300px;
     background-repeat: no-repeat;
     background-image: url('./img/main.jpg');
     width: 100%;
@@ -16,9 +16,9 @@
             display: flex;
             flex-direction: column;
             max-width: 600px;
-            padding-left: 40px;
             color: white;
             gap: 20px;
+            z-index: 1;
         }
     }
     &__items{
@@ -27,5 +27,13 @@
         justify-content: center;
         gap: 130px;
         align-items: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .mainpage{
+        &__items{
+            display: none;
+        }
     }
 }
